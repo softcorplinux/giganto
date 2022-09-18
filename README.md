@@ -1,27 +1,24 @@
 # Giganto Lib
 
-# Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
+<details>
+<summary style="font-size:14px">_.chunk(array, [size=1])</summary>
+<p>
+Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.</p>
 
-# Since
+<p>
+Arguments</p>
+<p>array (Array): The array to process.</p>
+<p>[size=1] (number): The length of each chunk</p>
+<p>Returns</p>
+<p>(Array): Returns the new array of chunks.</p>
 
-# 1.0.0
+<details>
+<summary style="font-size:14px">Example</summary>
 
-# Arguments
-
-# array (Array): The array to process.
-
-# [size=1] (number): The length of each chunk
-
-# Returns
-
-# (Array): Returns the new array of chunks.
-
-# Example
-
-# \_.chunk(['a', 'b', 'c', 'd'], 2);
-
-# // => [['a', 'b'], ['c', 'd']]
-
-# \_.chunk(['a', 'b', 'c', 'd'], 3);
-
-# // => [['a', 'b', 'c'], ['d']]
+<p>_.chunk(['a', 'b', 'c', 'd'], 2);</p>
+<p>// => [['a', 'b'], ['c', 'd']]</p>
+ 
+<p>_.chunk(['a', 'b', 'c', 'd'], 3);</p>
+<p>// => [['a', 'b', 'c'], ['d']]</p>
+</details>
+</details>
