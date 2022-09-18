@@ -4,8 +4,8 @@
     "module": "commonjs",
     "declaration": true,
     "outDir": "./build",
-    "strict": true
+    "strict": true,
   },
-  "include": ["src"],
+  "include": ["src", "__tests__"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }

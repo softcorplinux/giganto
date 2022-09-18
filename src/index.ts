@@ -1,1 +1,6 @@
-export const Greeter = (name: string) => `Hello ${name}`;
+import * as core from './core';
+
+export * from './core';
+
+const _ = {};
+export default Object.assign(_, { ...core });

@@ -9,17 +9,20 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/softcorplinux/giganto.git"
   },
-  "keywords": ["Giganto", "Library"],
+  "keywords": [
+    "Giganto",
+    "Library"
+  ],
   "author": "Isaikin Victor",
   "license": "ISC",
   "bugs": {
@@ -27,7 +30,9 @@
   },
   "homepage": "https://github.com/softcorplinux/giganto#readme",
   "devDependencies": {
+    "@types/assert": "^1.5.6",
     "@types/jest": "^29.0.3",
+    "assert": "^2.0.0",
     "jest": "^29.0.3",
     "prettier": "^2.7.1",
     "ts-jest": "^29.0.1",
@@ -37,5 +42,12 @@
   },
   "files": [
     "build/**/*"
-  ]
+  ],
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "jestconfig.json"
+      }
+    }
+  }
 }
