@@ -12,12 +12,7 @@
  * _.isArray([1, 2, 3]);
  * // => true
  *
- * _.isArray(document.body.children);
- * // => false
- *
  * _.isArray('abc');
  * // => false
  */
-export default function isArray<T>(array: T[]) {
-  return Array.isArray(array);
-}
+export default Array.isArray;

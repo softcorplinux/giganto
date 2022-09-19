@@ -24,6 +24,6 @@
  * _.isNumber('3');
  * // => false
  */
-export default function isNumber(num: number) {
-  return typeof num === 'number' && !isNaN(num);
+export default function isNumber(value: any) {
+  return typeof value === 'number' && !isNaN(value);
 }

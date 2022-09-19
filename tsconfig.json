@@ -5,6 +5,16 @@
     "declaration": true,
     "outDir": "./build",
     "strict": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "noImplicitThis": false,
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es7",
+      "dom.iterable"
+    ]
   },
   "include": ["src", "__tests__"],
   "exclude": ["node_modules", "**/__tests__/*"]

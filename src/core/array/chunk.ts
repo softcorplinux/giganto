@@ -1,6 +1,7 @@
 import isArray from '../lang/isArray';
 import isInteger from '../lang/isInteger';
-import isNumber from '../lang/isNumber';
+import array from '../lang//array';
+import ceil from '../math/ceil';
 
 /**
  * Creates an array of elements split into groups the length of `size`.
@@ -22,23 +23,23 @@ import isNumber from '../lang/isNumber';
  * _.chunk(['a', 'b', 'c', 'd'], 3);
  * // => [['a', 'b', 'c'], ['d']]
  */
-export default function chunk<T>(array: T[], size: number = 1) {
-  if (!isArray(array)) return undefined;
+export default function chunk<T>(arr: T[], size: number = 1) {
+  if (!isArray(arr)) return undefined;
   if (!isInteger(size)) return undefined;
 
-  const lastLength = array.length % size;
-  const length = Math.ceil(array.length / size);
-  const response = Array(length);
-  let originLength = array.length - 1;
+  const lastLength = arr.length % size;
+  const length = ceil(arr.length / size);
+  const response = array(length);
+  let resIndex = arr.length - 1;
   let index = length;
 
   while (index--) {
     let i = length === index + 1 && lastLength ? lastLength : size;
-    const res = Array(i);
+    const res = array(i);
 
     while (i--) {
-      res[i] = array[originLength];
-      originLength--;
+      res[i] = arr[resIndex];
+      resIndex--;
     }
 
     response[index] = res;

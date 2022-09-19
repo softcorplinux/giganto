@@ -9,10 +9,10 @@ describe('isArray', () => {
   });
 
   it('should return false because is a string', function () {
-    expect(isArray('abc' as any)).toEqual(false);
+    expect(isArray('abc')).toEqual(false);
   });
 
   it('should return false because is a object', function () {
-    expect(isArray({ a: 1, b: 2, c: 3 } as any)).toEqual(false);
+    expect(isArray({ a: 1, b: 2, c: 3 })).toEqual(false);
   });
 });
