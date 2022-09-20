@@ -9,4 +9,5 @@ export default function size(value: any) {
   if (isString(value) || isArray(value) || isFunction(value)) return value.length;
   if (isObject(value)) return Object.keys(value).length;
   if (!value) return 0;
+  return undefined;
 }
