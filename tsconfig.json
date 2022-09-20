@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./build",
@@ -8,6 +8,7 @@
     "downlevelIteration": true,
     "importHelpers": true,
     "noImplicitThis": false,
+    
     "lib": [
       "dom",
       "es5",
