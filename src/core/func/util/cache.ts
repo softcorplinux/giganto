@@ -8,13 +8,13 @@ export default function cache(func: any, hash: (args: any) => string) {
 
     // console.log('key', key, arguments);
 
-    // let result = func.call(this, ...arguments); // (**)
+    let result = func.call(this, ...arguments); // (**)
 
-    // cache.set(key, result);
-    // return result;
-    const result = func.apply(null, arguments);
     cache.set(key, result);
     return result;
+    // const result = func.apply(this, arguments);
+    // cache.set(key, result);
+    // return result;
   };
 }
 

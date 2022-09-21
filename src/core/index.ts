@@ -2,7 +2,9 @@
 export { default as chunk } from './func/array/chunk';
 export { default as compact } from './func/array/compact';
 export { default as concat } from './func/array/concat';
-export { default as concatUnique } from './func/array/concatUnique';
+export { default as difference } from './func/array/difference';
+export { default as intersection } from './func/array/intersection';
+export { default as union } from './func/array/union';
 
 // lang
 export { default as isArray } from './func/lang/isArray';
