@@ -1,3 +1,5 @@
 export default function intersection<T>(a: T[], b: T[]) {
-  return [...new Set([...new Set(a)].filter((i) => new Set(b).has(i)))];
+  const setA = new Set(a);
+  const setB = new Set(b);
+  return [...new Set([...setA].filter((i) => setB.has(i)))];
 }
