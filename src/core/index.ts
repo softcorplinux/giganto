@@ -4,6 +4,8 @@ export { default as compact } from './func/array/compact';
 export { default as concat } from './func/array/concat';
 export { default as difference } from './func/array/difference';
 export { default as intersection } from './func/array/intersection';
+export { default as differenceBy } from './func/array/differenceBy';
+export { default as differenceWith } from './func/array/differenceWith';
 export { default as union } from './func/array/union';
 
 // lang
@@ -23,3 +25,6 @@ export { default as cache } from './func/util/cache';
 
 // math
 export { default as ceil } from './func/math/ceil';
+
+// object
+export { default as keys } from './func/object/keys';
