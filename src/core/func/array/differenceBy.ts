@@ -1,4 +1,5 @@
 export default function differenceBy<T>(a: T[], b: T[], iteratee: (value: T) => any) {
+  if (!iteratee) return undefined;
   const setA = new Set(a);
   const setB = new Set(b.map((i) => iteratee(i)));
   const res = [
