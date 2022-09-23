@@ -23,7 +23,7 @@ import ceil from '../math/ceil';
  * _.chunk(['a', 'b', 'c', 'd'], 3);
  * // => [['a', 'b', 'c'], ['d']]
  */
-export default function chunk<T>(value: T[], size: number = 1) {
+export default function chunk<T>(value: T[], size: number = 1): T[][] | undefined {
   if (!isArray(value)) return undefined;
   if (!isInteger(size)) return undefined;
 

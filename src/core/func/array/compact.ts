@@ -2,7 +2,7 @@ import size from '../collection/size';
 import array from '../lang/array';
 import isArray from '../lang/isArray';
 
-export default function compact<T>(value: T[]) {
+export default function compact<T>(value: T[]): T[] | undefined {
   if (!isArray(value)) return undefined;
 
   let index = -1;

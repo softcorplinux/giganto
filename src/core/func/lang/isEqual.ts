@@ -1,12 +1,13 @@
 import keys from '../object/keys';
 import isArray from './isArray';
+import isBoolean from './isBoolean';
 import isFunction from './isFunction';
 import isNumber from './isNumber';
 import isObject from './isObject';
 import isString from './isString';
 
 export default function isEqual(a: any, b: any) {
-  if (isString(a) || isNumber(a) || isFunction(a)) return a === b;
+  if (isString(a) || isNumber(a) || isFunction(a) || isBoolean(a)) return a === b;
   else if (Number.isNaN(a)) return isNaN(a) === Number.isNaN(b);
   else if ((isArray(a) && isArray(b)) || (isObject(a) && isObject(b))) {
     const keys1 = keys(isArray(a) ? { ...a } : a);

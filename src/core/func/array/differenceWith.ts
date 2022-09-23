@@ -1,7 +1,7 @@
 import array from '../lang/array';
 import isArray from '../lang/isArray';
 
-export default function differenceWith<T>(a: T[], b: T[], comparator: (a: T, b: T) => boolean) {
+export default function differenceWith<T>(a: T[], b: T[], comparator: (a: T, b: T) => boolean): T[] | undefined {
   if (!isArray(a)) return undefined;
   if (!isArray(b)) return undefined;
   if (!comparator) return undefined;

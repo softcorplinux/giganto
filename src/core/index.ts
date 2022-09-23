@@ -20,9 +20,11 @@ export { default as isObject } from './func/lang/isObject';
 export { default as isString } from './func/lang/isString';
 export { default as isNaN } from './func/lang/isNaN';
 export { default as isEqual } from './func/lang/isEqual';
+export { default as isBoolean } from './func/lang/isBoolean';
 
 // collection
 export { default as size } from './func/collection/size';
+export { default as filter } from './func/collection/filter';
 
 // util
 export { default as cache } from './func/util/cache';
