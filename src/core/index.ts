@@ -16,6 +16,8 @@ export { default as array } from './func/lang/array';
 export { default as isFunction } from './func/lang/isFunction';
 export { default as isObject } from './func/lang/isObject';
 export { default as isString } from './func/lang/isString';
+export { default as isNaN } from './func/lang/isNaN';
+export { default as isEqual } from './func/lang/isEqual';
 
 // collection
 export { default as size } from './func/collection/size';
