@@ -25,6 +25,12 @@ export { default as isBoolean } from './func/lang/isBoolean';
 // collection
 export { default as size } from './func/collection/size';
 export { default as filter } from './func/collection/filter';
+export { default as map } from './func/collection/map';
+export { default as find } from './func/collection/find';
+export { default as every } from './func/collection/every';
+export { default as forEach } from './func/collection/forEach';
+export { default as some } from './func/collection/some';
+export { default as reduce } from './func/collection/reduce';
 
 // util
 export { default as cache } from './func/util/cache';

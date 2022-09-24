@@ -27,7 +27,6 @@ export default function isEqual(a: any, b: any) {
       }
       return true;
     }
-    return false;
   }
   return false;
 }

@@ -23,14 +23,13 @@ import ceil from '../math/ceil';
  * _.chunk(['a', 'b', 'c', 'd'], 3);
  * // => [['a', 'b', 'c'], ['d']]
  */
-export default function chunk<T>(value: T[], size: number = 1): T[][] | undefined {
-  if (!isArray(value)) return undefined;
-  if (!isInteger(size)) return undefined;
+export default function chunk<T>(values: T[], size: number = 1): T[][] | undefined {
+  if (!isArray(values) || !isInteger(size)) return undefined;
 
-  const lastLength = value.length % size;
-  const length = ceil(value.length / size);
+  const lastLength = values.length % size;
+  const length = ceil(values.length / size);
   const response = array(length);
-  let resIndex = value.length - 1;
+  let resIndex = values.length - 1;
   let index = length;
 
   while (index--) {
@@ -38,7 +37,7 @@ export default function chunk<T>(value: T[], size: number = 1): T[][] | undefine
     const res = array(i);
 
     while (i--) {
-      res[i] = value[resIndex];
+      res[i] = values[resIndex];
       resIndex--;
     }
 

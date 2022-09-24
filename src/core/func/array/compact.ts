@@ -2,17 +2,17 @@ import size from '../collection/size';
 import array from '../lang/array';
 import isArray from '../lang/isArray';
 
-export default function compact<T>(value: T[]): T[] | undefined {
-  if (!isArray(value)) return undefined;
+export default function compact<T>(values: T[]): T[] | undefined {
+  if (!isArray(values)) return undefined;
 
   let index = -1;
   let resIndex = 0;
-  const length = value.length;
+  const length = values.length;
   const res = array();
 
   while (++index < length) {
-    if (size(value[index])) {
-      res[resIndex++] = value[index];
+    if (size(values[index])) {
+      res[resIndex++] = values[index];
     }
   }
 
