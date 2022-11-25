@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import isArray from '../../core/lang/isArray';
+import isArray from '../../core/func/lang/isArray';
 
 describe('isArray', () => {
   const array = [0, 1, 2, 3, 4, 5];

@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import isNumber from '../../core/lang/isNumber';
+import isNumber from '../../core/func/lang/isNumber';
 
 describe('isNumber', () => {
   it('should return true', () => {
