@@ -1,10 +1,32 @@
 import filter from '../collection/filter';
 import isArray from '../lang/isArray';
+import isFunction from '../lang/isFunction';
 
-export default function differenceBy<T>(a: T[], b: T[], predicate: (value: T) => any): T[] | undefined {
-  if (!isArray(a) || !isArray(b) || !predicate) return undefined;
-  const setA = new Set(a);
-  const setB = new Set(b.map((i) => predicate(i)));
+/**
+ * This method is similar to _.difference, except that it takes the third predicate argument,
+ * it is a function with a single argumet of type args:T, it is called for each element of the
+ * array and values to generate a criterion by which they are compared.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.0.0
+ * @category Array
+ * @param {Array} values The array to inspect.
+ * @param {Array} [args] The values to exclude.
+ * @param {Function} [predicate] The predicate called for each element.
+ * @returns {Array} Returns the new array of filtered values.
+ * @example
+ *
+ * _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
+ * // => [1.2]
+ *
+ * _.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], (value) => value.x);
+ * // => [{ 'x': 2 }]
+ */
+export default function differenceBy<T>(values: T[], args: T[], predicate: (value: T) => any): T[] | undefined {
+  if (!isArray(values) || !isArray(args) || !predicate || !isFunction(predicate)) return undefined;
+  const setA = new Set(values);
+  const setB = new Set(args.map((i) => predicate(i)));
   const res = [
     ...new Set(
       filter([...setA], (i) => {

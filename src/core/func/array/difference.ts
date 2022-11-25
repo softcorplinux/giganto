@@ -9,7 +9,7 @@ import isArray from '../lang/isArray';
  * @since 1.0.0
  * @category Array
  * @param {Array} values The array to inspect.
- * @param {...*} [args] The values to exclude.
+ * @param {Array} [args] The values to exclude.
  * @returns {Array} Returns the new array of filtered values.
  * @example
  *

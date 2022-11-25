@@ -4,7 +4,7 @@ import difference from '../../core/func/array/difference';
 describe('difference', () => {
   const array = [2, 1];
 
-  it('should return new arrays', () => {
+  it('should return new array', () => {
     expect(difference(array, [2, 3])).toEqual([1]);
   });
 

@@ -88,12 +88,12 @@ console.log(array);
 #
 
   <pre>_.difference(values, [args])</pre>
-  <p>Creates a new array of values, excluding matches from the args argument.</p>
+  <p>Creates a new array of values, excluding matches from the <code>args</code> argument.</p>
 
   <h5>Arguments</h5>
   <ol>
     <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
-    <li><code>[args]</code> <em>(...*)</em>: The values to exclude.</li>
+    <li><code>[args]</code> <em>{Array}</em>: The values to exclude.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
@@ -106,6 +106,35 @@ console.log(array);
 ```js
 _.difference([2, 1], [2, 3]);
 // => [1]
+```
+
+  </details>
+
+#
+
+  <pre>_.differenceBy(values, [args], [predicate])</pre>
+  <p>This method is similar to _.difference, except that it takes the third <code>predicate</code> argument, it is a function with a single argumet of type <code>args:T</code>, it is called for each element of the array and values to generate a criterion by which they are compared.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[args]</code> <em>{Array}</em>: The values to exclude.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
+// => [1.2]
+
+_.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], (value) => value.x);
+// => [{ 'x': 2 }]
 ```
 
   </details>
