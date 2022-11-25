@@ -20,9 +20,11 @@
 
   <details>
   <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;"><h5>Example</h5></summary>
-  <code>
-    <p>_.chunk(['a', 'b', 'c', 'd'], 2); <!--// => [['a', 'b'], ['c', 'd']]--></p>
-    <p>_.chunk(['a', 'b', 'c', 'd'], 3); <!--// => [['a', 'b', 'c'], ['d']]--></p>
-  </code>
+  <p>
+    <code>
+      _.chunk(['a', 'b', 'c', 'd'], 2); <!--// => [['a', 'b'], ['c', 'd']]-->
+      _.chunk(['a', 'b', 'c', 'd'], 3); <!--// => [['a', 'b', 'c'], ['d']]-->
+    </code>
+  </p>
   </details>
 </details>
