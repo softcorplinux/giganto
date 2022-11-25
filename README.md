@@ -29,6 +29,21 @@
 
   </p>
 
-  <pre><span class="pl-kos">&lt;</span><span class="pl-ent">script</span> <span class="pl-c1">src</span>="<span class="pl-s">lodash.js</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre>
+<div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c">// Load the full build.</span>
+<span class="pl-k">var</span> <span class="pl-s1">_</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-c">// Load the core build.</span>
+<span class="pl-k">var</span> <span class="pl-s1">_</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/core'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-c">// Load the FP build for immutable auto-curried iteratee-first data-last methods.</span>
+<span class="pl-k">var</span> <span class="pl-s1">fp</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/fp'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Load method categories.</span>
+<span class="pl-k">var</span> <span class="pl-s1">array</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/array'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">var</span> <span class="pl-s1">object</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/fp/object'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+
+<span class="pl-c">// Cherry-pick methods for smaller browserify/rollup/webpack bundles.</span>
+<span class="pl-k">var</span> <span class="pl-s1">at</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/at'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">var</span> <span class="pl-s1">curryN</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'lodash/fp/curryN'</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
+
+  </div></div>
   </details>
 </details>
