@@ -2,7 +2,7 @@
 
 <details open>
 <summary>
-  <h3 style="font-size:18px; font-weight:bold; color:#5f5f5f;">_.chunk(array, [size=1])</h3>
+  <h3 style="font-size:18px; font-weight:bold; color:#5f5f5f;">Array</h3>
 </summary>
 
   <h4 style="padding:16px; background:#eee; color:#5f5f5f;">_.chunk(array, [size=1])</h4>
@@ -21,11 +21,10 @@
   <details>
   <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;"><h5>Example</h5></summary>
   <pre>
-    <p>_.chunk(['a', 'b', 'c', 'd'], 2);</p>
-    <p>// => [['a', 'b'], ['c', 'd']]</p>
-    
-    <p>_.chunk(['a', 'b', 'c', 'd'], 3);</p>
-    <p>// => [['a', 'b', 'c'], ['d']]</p>
+    <p>_.chunk(['a', 'b', 'c', 'd'], 2);<br />
+    // => [['a', 'b'], ['c', 'd']]</p><br />
+    <p>_.chunk(['a', 'b', 'c', 'd'], 3);<br />
+    // => [['a', 'b', 'c'], ['d']]</p>
   </pre>
   </details>
 </details>
