@@ -1,19 +1,20 @@
 import isArray from '../lang/isArray';
 import isInteger from '../lang/isInteger';
-import array from '../lang//array';
+import array from '../lang/array';
+import size from '../collection/size';
 import ceil from '../math/ceil';
 
 /**
- * Creates an array of elements split into groups the length of `size`.
- * If `array` can't be split evenly, the final chunk will be the remaining
- * elements.
+ * Creates an array of elements divided into groups. The groups are divided into uniform parts
+ * that are equal to the length argument. If the array cannot be divided evenly, the last
+ * fragment will be the remaining elements.
  *
  * @static
  * @memberOf _
  * @since 1.0.0
  * @category Array
  * @param {Array} array The array to process.
- * @param {number} [size=1] The length of each chunk
+ * @param {number} [length=1] The length of each chunk
  * @returns {Array} Returns the new array of chunks.
  * @example
  *
@@ -23,17 +24,18 @@ import ceil from '../math/ceil';
  * _.chunk(['a', 'b', 'c', 'd'], 3);
  * // => [['a', 'b', 'c'], ['d']]
  */
-export default function chunk<T>(values: T[], size: number = 1): T[][] | undefined {
-  if (!isArray(values) || !isInteger(size)) return undefined;
+export default function chunk<T>(values: T[], length: number = 1): T[][] | undefined {
+  if (!isArray(values) || !isInteger(length)) return undefined;
 
-  const lastLength = values.length % size;
-  const length = ceil(values.length / size);
-  const response = array(length);
-  let resIndex = values.length - 1;
-  let index = length;
+  const valuesSize = size(values);
+  const lastLength = valuesSize % length;
+  const partLength = ceil(valuesSize / length);
+  const response = array(partLength);
+  let resIndex = valuesSize - 1;
+  let index = partLength;
 
   while (index--) {
-    let i = length === index + 1 && lastLength ? lastLength : size;
+    let i = partLength === index + 1 && lastLength ? lastLength : length;
     const res = array(i);
 
     while (i--) {
