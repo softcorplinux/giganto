@@ -13,7 +13,7 @@ import ceil from '../math/ceil';
  * @memberOf _
  * @since 1.0.0
  * @category Array
- * @param {Array} array The array to process.
+ * @param {Array} values The array to process.
  * @param {number} [length=1] The length of each chunk
  * @returns {Array} Returns the new array of chunks.
  * @example

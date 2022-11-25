@@ -10,7 +10,7 @@ import isArray from '../lang/isArray';
  * @memberOf _
  * @since 1.0.0
  * @category Array
- * @param {Array} array The array to compact.
+ * @param {Array} values The array to compact.
  * @returns {Array} Returns the new array of filtered values.
  * @example
  *

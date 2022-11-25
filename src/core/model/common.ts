@@ -1,4 +1,4 @@
-export type Many<T> = T | ConcatArray<T>;
+export type Many<T> = T | ConcatArray<T> | ReadonlyArray<T>;
 export interface Dictionary<T> {
   [key: string | symbol]: T;
 }
