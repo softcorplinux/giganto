@@ -30,7 +30,8 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 ```
 
   </details>
-
+  
+#
   <pre>_.compact(array)</pre>
   <p>Creates a new array and removes all false values from it. The values <code>false</code>, <code>null</code>, <code>""</code>, <code>undefined</code> and <code>NaN</code> are false. Note that the value <code>0</code> is not false.</p>
 
