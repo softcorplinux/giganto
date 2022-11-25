@@ -30,7 +30,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 ```
 
   </details>
-  
+
 #
 
   <pre>_.compact(values)</pre>
@@ -52,6 +52,8 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)]);
 // => [0, 1, 2, 3, 4, 5, 6]
 ```
+
+</details>
 
 #
 
