@@ -1,10 +1,12 @@
 # Giganto Lib
 
 <details open>
-<summary style="font-size:18px; font-weight:bold; color:#5f5f5f;">Array</summary>
+<summary>
+  <h3 style="font-size:18px; font-weight:bold; color:#5f5f5f;">_.chunk(array, [size=1])</h3>
+</summary>
 
   <h4 style="padding:16px; background:#eee; color:#5f5f5f;">_.chunk(array, [size=1])</h4>
-  <p>Creates an array of elements divided into groups. The groups are divided into uniform parts that are equal to the length argument. If the array cannot be divided evenly, the last fragment will be the remaining elements.</p>
+  <p>Creates an array of elements divided into groups. The groups are divided into uniform parts that are equal to the argument <code>[length=1]</code>. If the array cannot be divided evenly, the last fragment will be the remaining elements.</p>
 
   <h5>Arguments</h5>
   <ol>
@@ -17,11 +19,13 @@
   </ol>
 
   <details>
-  <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;">Example</summary>
-  <p>_.chunk(['a', 'b', 'c', 'd'], 2);</p>
-  <p>// => [['a', 'b'], ['c', 'd']]</p>
-  
-  <p>_.chunk(['a', 'b', 'c', 'd'], 3);</p>
-  <p>// => [['a', 'b', 'c'], ['d']]</p>
+  <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;"><h5>Example</h5></summary>
+  <pre>
+    <p>_.chunk(['a', 'b', 'c', 'd'], 2);</p>
+    <p>// => [['a', 'b'], ['c', 'd']]</p>
+    
+    <p>_.chunk(['a', 'b', 'c', 'd'], 3);</p>
+    <p>// => [['a', 'b', 'c'], ['d']]</p>
+  </pre>
   </details>
 </details>
