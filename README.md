@@ -21,10 +21,8 @@
   <details>
   <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;"><h5>Example</h5></summary>
   <pre>
-    <p>_.chunk(['a', 'b', 'c', 'd'], 2);<br />
-    // => [['a', 'b'], ['c', 'd']]</p><br />
-    <p>_.chunk(['a', 'b', 'c', 'd'], 3);<br />
-    // => [['a', 'b', 'c'], ['d']]</p>
+    <p>_.chunk(['a', 'b', 'c', 'd'], 2); <!--// => [['a', 'b'], ['c', 'd']]--></p>
+    <p>_.chunk(['a', 'b', 'c', 'd'], 3); <!--// => [['a', 'b', 'c'], ['d']]--></p>
   </pre>
   </details>
 </details>
