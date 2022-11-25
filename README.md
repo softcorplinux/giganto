@@ -1,4 +1,4 @@
-# Giganto Lib
+# Giganto
 
 <details open>
 <summary>
