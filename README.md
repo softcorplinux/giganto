@@ -21,8 +21,12 @@
   <details>
   <summary style="font-size:14px; font-weight:bold; color:#5f5f5f;"><h5>Example</h5></summary>
   <p>
-    <pre>_.chunk(['a', 'b', 'c', 'd'], 2); <em>// => [['a', 'b'], ['c', 'd']]</em>
-_.chunk(['a', 'b', 'c', 'd'], 3); <!--// => [['a', 'b', 'c'], ['d']]--></pre>
+    <pre>_.chunk(['a', 'b', 'c', 'd'], 2);
+<em>// => [['a', 'b'], ['c', 'd']]</em>
+
+\_.chunk(['a', 'b', 'c', 'd'], 3);
+<em>// => [['a', 'b', 'c'], ['d']]</em></pre>
+
   </p>
   </details>
 </details>
