@@ -28,5 +28,7 @@
 <em>// => [['a', 'b', 'c'], ['d']]</em></pre>
 
   </p>
+
+  <pre><span class="pl-kos">&lt;</span><span class="pl-ent">script</span> <span class="pl-c1">src</span>="<span class="pl-s">lodash.js</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre>
   </details>
 </details>
