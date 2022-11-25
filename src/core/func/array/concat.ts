@@ -21,7 +21,10 @@ import isArray from '../lang/isArray';
  * console.log(array)
  * // => [1, { user: 'Vic' }]
  */
-export default function concat<T, E extends PartialShallow<E> | Dictionary<E>>(values: T[], ...args: Many<E>[] | E[]) {
+export default function concat<T, E extends PartialShallow<E> | Dictionary<E>>(
+  values: T[],
+  ...args: Many<E>[] | E[]
+): (T | E | ConcatArray<E>)[] | undefined {
   if (!isArray(values)) return undefined;
 
   return [...values, ...args];

@@ -14,7 +14,7 @@ import isArray from '../lang/isArray';
  * @returns {Array} Returns the new array of filtered values.
  * @example
  *
- * _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)])
+ * _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)]);
  * // => [0, 1, 2, 3, 4, 5, 6]
  */
 export default function compact<T>(values: T[]): T[] | undefined {

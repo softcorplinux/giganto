@@ -84,4 +84,29 @@ console.log(array);
 ```
 
   </details>
+
+#
+
+  <pre>_.difference(values, [args])</pre>
+  <p>Creates a new array of values, excluding matches from the args argument.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[args]</code> <em>(...*)</em>: The values to exclude.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.difference([2, 1], [2, 3]);
+// => [1]
+```
+
+  </details>
 </details>
