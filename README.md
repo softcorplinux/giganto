@@ -2,7 +2,7 @@
 
 <details open>
 <summary>
-  <h3 style="font-size:18px; font-weight:bold; color:#5f5f5f;">Array</h3>
+  <h2 style="font-size:18px; font-weight:bold; color:#5f5f5f;">Array</h2>
 </summary>
 
   <h4 style="padding:16px; background:#eee; color:#5f5f5f;">_.chunk(array, [size=1])</h4>
