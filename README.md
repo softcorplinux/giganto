@@ -312,7 +312,7 @@ _.intersection([2, 1], [2, 3]);
 
   <h5>Arguments</h5>
   <ol>
-    <li><code>[...args]</code> <em>{Array}</em>: The arrays to inspect.</li>
+    <li><code>[...args]</code> <em>(...*)</em>: The values to inspect.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
