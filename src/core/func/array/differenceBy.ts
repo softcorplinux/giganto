@@ -20,20 +20,18 @@ import isFunction from '../lang/isFunction';
  * _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
  * // => [1.2]
  *
- * _.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], (value) => value.x);
+ * _.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], ({x}) => x);
  * // => [{ 'x': 2 }]
  */
 export default function differenceBy<T>(values: T[], args: T[], predicate: (value: T) => any): T[] | undefined {
   if (!isArray(values) || !isArray(args) || !predicate || !isFunction(predicate)) return undefined;
   const setA = new Set(values);
   const setB = new Set(args.map((i) => predicate(i)));
-  const res = [
+  return [
     ...new Set(
       filter([...setA], (i) => {
         return !setB.has(predicate(i));
       }),
     ),
   ];
-
-  return res;
 }
