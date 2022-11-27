@@ -1,4 +1,4 @@
-import { Dictionary, Many, PartialShallow } from '../../model/common';
+import { Dictionary, Many, PartialShallow } from '../../types/common';
 import isArray from '../lang/isArray';
 
 /**

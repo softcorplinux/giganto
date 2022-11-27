@@ -1,4 +1,4 @@
-import { Many } from '../../model/common';
+import { Many } from '../../types/common';
 
 /**
  * Creates a new array of unique values.
