@@ -2,7 +2,7 @@
 
 # Installation
 
-# Why Lodash?
+# Why Giganto?
 
 <p><code>Giganto</code> simplifies JavaScript, eliminating the hassle of working with arrays, numbers, objects, strings, etc. Modular <code>Giganto</code> methods are great for:</p>
 <ul>
