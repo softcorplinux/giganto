@@ -43,6 +43,5 @@ export default function dropRightWhile<T>(
     }
   }
 
-  // const lastIndex = map(values, (value) => value)?.lastIndexOf(predicate(value, index, array))
   return filter(values, (_, index) => index <= resIndex);
 }
