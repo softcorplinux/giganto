@@ -235,4 +235,35 @@ _.dropRight([1, 2, 3], 0);
 ```
 
   </details>
+
+#
+
+  <pre>_.dropRight(values, [num=1])</pre>
+  <p>Creates an array fragment that excludes elements removed from the end. Elements are discarded until the predicate returns false. The predicate is called with three arguments: (<code>value</code>, <code>index</code>, <code>array</code>). Only <code>value</code> is required, the rest of the predicate arguments are optional.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The function called at each iteration.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+const users = [
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.dropRightWhile(users, ({ active }) => !active);
+// => [{ 'user': 'Vic',  'active': true }]
+```
+
+  </details>
 </details>

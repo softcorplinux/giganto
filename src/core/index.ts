@@ -9,6 +9,7 @@ export { default as differenceWith } from './func/array/differenceWith';
 export { default as union } from './func/array/union';
 export { default as drop } from './func/array/drop';
 export { default as dropRight } from './func/array/dropRight';
+export { default as dropRightWhile } from './func/array/dropRightWhile';
 
 // lang
 export { default as isArray } from './func/lang/isArray';

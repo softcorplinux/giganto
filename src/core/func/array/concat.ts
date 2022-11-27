@@ -26,6 +26,5 @@ export default function concat<T, E extends PartialShallow<E> | Dictionary<E>>(
   ...args: Many<E>[] | E[]
 ): (T | E | ConcatArray<E>)[] | undefined {
   if (!isArray(values)) return undefined;
-
   return [...values, ...args];
 }
