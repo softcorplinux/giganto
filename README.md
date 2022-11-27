@@ -266,4 +266,29 @@ _.dropRightWhile(users, ({ active }) => !active);
 ```
 
   </details>
+
+#
+
+  <pre>_.intersection(values, [args])</pre>
+  <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[args]</code> <em>{Array}</em>: The values to include.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of intersecting values.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.intersection([2, 1], [2, 3]);
+// => [2]
+```
+
+  </details>
 </details>
