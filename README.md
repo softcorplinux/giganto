@@ -238,7 +238,7 @@ _.dropRight([1, 2, 3], 0);
 
 #
 
-  <pre>_.dropRight(values, [num=1])</pre>
+  <pre>_.dropRightWhile(values, [predicate])</pre>
   <p>Creates an array fragment that excludes elements removed from the end. Elements are discarded until the predicate returns false. The predicate is called with three arguments: (<code>value</code>, <code>index</code>, <code>array</code>). Only <code>value</code> is required, the rest of the predicate arguments are optional.</p>
 
   <h5>Arguments</h5>
