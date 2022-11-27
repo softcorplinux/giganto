@@ -1,4 +1,5 @@
 import filter from '../collection/filter';
+import size from '../collection/size';
 import isArray from '../lang/isArray';
 import isFunction from '../lang/isFunction';
 
@@ -17,19 +18,31 @@ import isFunction from '../lang/isFunction';
  * @example
  *
  * const users = [
- *  { 'user': 'Vic',  'active': true },
- *  { 'user': 'Nat',    'active': false },
- *  { 'user': 'Den', 'active': false }
+ *  { user: 'Ben', active: false },
+ *  { user: 'Vic', active: true },
+ *  { user: 'Nat', active: false },
+ *  { user: 'Den', active: false }
  * ];
  *
  * _.dropRightWhile(users, ({active}) => !active);
- * // => [{ 'user': 'Vic',  'active': true }]
+ * // => [{ user: 'Ben', active: false }, { user: 'Vic',  active: true }]
  */
 export default function dropRightWhile<T>(
   values: T[],
   predicate: (value: T, index?: number, array?: T[]) => boolean,
-  thisArg?: any,
 ): T[] | undefined {
   if (!isArray(values) || !predicate || !isFunction(predicate)) return undefined;
-  return filter(values, (value, index, array) => !predicate(value, index, array));
+
+  let resIndex = -1;
+  let index = size(values);
+
+  while (index--) {
+    if (!predicate(values[index], index, values)) {
+      resIndex = index;
+      break;
+    }
+  }
+
+  // const lastIndex = map(values, (value) => value)?.lastIndexOf(predicate(value, index, array))
+  return filter(values, (_, index) => index <= resIndex);
 }

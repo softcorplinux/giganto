@@ -269,13 +269,14 @@ _.dropRight([1, 2, 3], 0);
 
 ```js
 const users = [
+  { user: 'Ben', active: false },
   { user: 'Vic', active: true },
   { user: 'Nat', active: false },
   { user: 'Den', active: false },
 ];
 
 _.dropRightWhile(users, ({ active }) => !active);
-// => [{ 'user': 'Vic',  'active': true }]
+// => [{ user: 'Ben', active: false }, { user: 'Vic',  active: true }]
 ```
 
   </details>

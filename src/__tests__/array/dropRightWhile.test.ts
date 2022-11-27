@@ -3,13 +3,17 @@ import dropRightWhile from '../../core/func/array/dropRightWhile';
 
 describe('dropRightWhile', () => {
   const array = [
+    { user: 'Ben', active: false },
     { user: 'Vic', active: true },
     { user: 'Nat', active: false },
     { user: 'Den', active: false },
   ];
 
   it('should return new array', () => {
-    expect(dropRightWhile(array, ({ active }) => !active)).toEqual([{ user: 'Vic', active: true }]);
+    expect(dropRightWhile(array, ({ active }) => !active)).toEqual([
+      { user: 'Ben', active: false },
+      { user: 'Vic', active: true },
+    ]);
   });
 
   it('should return undefined expect an array', () => {
