@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 import drop from '../../core/func/array/drop';
 
-describe('differenceWith', () => {
+describe('drop', () => {
   const array = [1, 2, 3];
 
   it('should return new array', () => {

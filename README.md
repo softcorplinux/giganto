@@ -63,7 +63,7 @@ _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)]);
   <h5>Arguments</h5>
   <ol>
     <li><code>values</code> <em>(Array)</em>: The array to concatenate.</li>
-    <li><code>[args]</code> <em>(...*)</em>: The values to concatenate.</li>
+    <li><code>[...args]</code> <em>(...*)</em>: The values to concatenate.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
@@ -197,6 +197,40 @@ _.drop([1, 2, 3], 5);
 // => []
 
 _.drop([1, 2, 3], 0);
+// => [1, 2, 3]
+```
+
+  </details>
+
+#
+
+  <pre>_.dropRight(values, [num=1])</pre>
+  <p>Creates a fragment of an array with <code>n</code> elements deleted from the end.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[num=1]</code> <em>{Number}</em>: The number of elements to drop.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.dropRight([1, 2, 3]);
+// => [1, 2]
+
+_.dropRight([1, 2, 3], 2);
+// => [1]
+
+_.dropRight([1, 2, 3], 5);
+// => []
+
+_.dropRight([1, 2, 3], 0);
 // => [1, 2, 3]
 ```
 
