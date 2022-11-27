@@ -291,4 +291,34 @@ _.intersection([2, 1], [2, 3]);
 ```
 
   </details>
+
+#
+
+  <pre>_.union([...args])</pre>
+  <p>Creates a new array of unique values.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>...args</code> <em>{Array}</em>: The arrays to inspect.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of combined values.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.union([2], [1, 2, 5, 2]);
+// => [2, 1, 5]
+
+_.union(2, 2, 3, 3, 1);
+// => [2, 3, 1]
+
+_.union(2, 2, 3, 3, 1, [4], [1]);
+// => [2, 3, 1, 4]
+```
+
+  </details>
 </details>
