@@ -8,7 +8,7 @@ describe('compact', () => {
     expect(compact(array)).toEqual([0, 1, 2, 3, 4, 5, 6]);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(compact({ data: array } as any)).toEqual(undefined);
   });
 });

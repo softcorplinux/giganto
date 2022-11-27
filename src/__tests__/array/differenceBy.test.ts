@@ -12,15 +12,15 @@ describe('differenceBy', () => {
     expect(differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], (value) => value.x)).toEqual([{ x: 2 }]);
   });
 
-  it('should return undefined expect a predicate', function () {
+  it('should return undefined expect a predicate', () => {
     expect(differenceBy(array, array, { data: array } as any)).toEqual(undefined);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(differenceBy({ data: array } as any, array, Math.floor)).toEqual(undefined);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(differenceBy(array, { data: array } as any, Math.floor)).toEqual(undefined);
   });
 });

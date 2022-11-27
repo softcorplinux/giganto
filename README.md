@@ -167,4 +167,38 @@ _.differenceWith([{ x: 2 }, { x: 1 }], [{ x: 1 }], (a, b) => a.x === b.x);
 ```
 
   </details>
+
+#
+
+  <pre>_.drop(values, [num=1])</pre>
+  <p>Creates a fragment of an array with <code>n</code> elements deleted from the beginning.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[num=1]</code> <em>{Number}</em>: The number of elements to drop.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.drop([1, 2, 3]);
+// => [2, 3]
+
+_.drop([1, 2, 3], 2);
+// => [3]
+
+_.drop([1, 2, 3], 5);
+// => []
+
+_.drop([1, 2, 3], 0);
+// => [1, 2, 3]
+```
+
+  </details>
 </details>

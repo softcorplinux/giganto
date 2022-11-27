@@ -8,11 +8,11 @@ describe('difference', () => {
     expect(difference(array, [2, 3])).toEqual([1]);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(difference({ data: array } as any, array)).toEqual(undefined);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(difference(array, { data: array } as any)).toEqual(undefined);
   });
 });

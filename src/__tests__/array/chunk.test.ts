@@ -18,11 +18,11 @@ describe('chunk', () => {
     ]);
   });
 
-  it('should return undefined expect an array', function () {
+  it('should return undefined expect an array', () => {
     expect(chunk({ data: array } as any, 2)).toEqual(undefined);
   });
 
-  it('should return undefined expect a number', function () {
+  it('should return undefined expect a number', () => {
     expect(chunk(array, array.length / 4)).toEqual(undefined);
   });
 });
