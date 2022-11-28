@@ -409,6 +409,34 @@ _.findLastIndex(users, ({ user }) => user !== 'Den');
 
 #
 
+  <pre>_.flatten(values, [depth])</pre>
+  <p>Recursively flatten the array to the depth of times.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to flatten.</li>
+    <li><code>[depth]</code> <em>{Number}</em>: The maximum recursion depth.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new flattened array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.flatten([1, [2, [3, [4]], 5]]);
+// => [1, 2, [3, [4]], 5]
+
+_.flatten([1, [2, [3, [4]], 5]], 5);
+// => [1, 2, 3, 4, 5]
+```
+
+  </details>
+
+#
+
   <pre>_.head(values)</pre>
   <p>Returns the first element of the array.</p>
 
