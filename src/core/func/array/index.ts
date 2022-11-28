@@ -16,6 +16,7 @@ export { default as fromPairs } from './fromPairs';
 export { default as head } from './head';
 export { default as indexOf } from './indexOf';
 export { default as initial } from './initial';
-
 export { default as intersection } from './intersection';
+export { default as intersectionBy } from './intersectionBy';
+
 export { default as union } from './union';
