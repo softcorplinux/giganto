@@ -70,7 +70,7 @@ _.dropRightWhile(array, ({ active }) => !active);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.chunk(['a', 'b', 'c', 'd'], 2);
@@ -97,7 +97,7 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)]);
@@ -122,7 +122,7 @@ _.compact([0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)]);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const array = [1, { user: 'Vic' }];
@@ -152,7 +152,7 @@ console.log(array);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.difference([2, 1], [2, 3]);
@@ -178,7 +178,7 @@ _.difference([2, 1], [2, 3]);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
@@ -207,7 +207,7 @@ _.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], ({ x }) => x);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.differenceWith([1, 2, 3, 6], [4, 5, 2, 2, 1], _.isEqual);
@@ -235,7 +235,7 @@ _.differenceWith([{ x: 2 }, { x: 1 }], [{ x: 1 }], (a, b) => a.x === b.x);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.drop([1, 2, 3]);
@@ -269,7 +269,7 @@ _.drop([1, 2, 3], 0);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.dropRight([1, 2, 3]);
@@ -303,7 +303,7 @@ _.dropRight([1, 2, 3], 0);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const users = [
@@ -335,7 +335,7 @@ _.dropRightWhile(users, ({ active }) => !active);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const users = [
@@ -369,7 +369,7 @@ _.dropWhile(users, ({ active }) => !active);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.fill([1, 2, 3, 4], 'N', 0, -2);
@@ -397,7 +397,7 @@ _.fill([1, 2, 3, 4], 'N', 1, 3);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const users = [
@@ -429,7 +429,7 @@ _.findIndex(users, ({ user }) => user === 'Vic');
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const users = [
@@ -461,7 +461,7 @@ _.findLastIndex(users, ({ user }) => user !== 'Den');
   </ol>
 
   <details>
-  <summary>Example</summary>
+ <summary><b>Example</b></summary>
 
 ```js
 _.flatten([1, [2, [3, [4]], 5]]);
@@ -488,7 +488,7 @@ _.flatten([1, [2, [3, [4]], 5]], 5);
   </ol>
 
   <details>
- <summary>Example</summary>
+ <summary><b>Example</b></summary>
 
 ```js
 _.fromPairs([
@@ -516,7 +516,7 @@ _.fromPairs([
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 const users = [
@@ -547,7 +547,7 @@ _.head(users);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.intersection([2, 1], [2, 3]);
@@ -571,7 +571,7 @@ _.intersection([2, 1], [2, 3]);
   </ol>
 
   <details>
-  <summary>Example</summary>
+  <summary><b>Example</b></summary>
 
 ```js
 _.union([2], [1, 2, 5, 2]);
