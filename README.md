@@ -533,6 +533,31 @@ _.head(users);
 
 #
 
+  <pre>_.indexOf(values, value)</pre>
+  <p>Returns the index of the first value found in the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to search for.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index of the matched value, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.indexOf([1, 2, 1, 2, 5], 2);
+// => 1
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 

@@ -2,10 +2,8 @@ export { default as chunk } from './chunk';
 export { default as compact } from './compact';
 export { default as concat } from './concat';
 export { default as difference } from './difference';
-export { default as intersection } from './intersection';
 export { default as differenceBy } from './differenceBy';
 export { default as differenceWith } from './differenceWith';
-export { default as union } from './union';
 export { default as drop } from './drop';
 export { default as dropRight } from './dropRight';
 export { default as dropRightWhile } from './dropRightWhile';
@@ -15,5 +13,8 @@ export { default as findIndex } from './findIndex';
 export { default as findLastIndex } from './findLastIndex';
 export { default as flatten } from './flatten';
 export { default as fromPairs } from './fromPairs';
-
 export { default as head } from './head';
+export { default as indexOf } from './indexOf';
+
+export { default as intersection } from './intersection';
+export { default as union } from './union';
