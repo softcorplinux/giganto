@@ -2,6 +2,20 @@
 
 # Installation
 
+<p>In a browser:</p>
+
+```html
+<script src="PATH/TO/index.js"></script>
+```
+
+<p>Using npm:</p>
+
+```shell
+npm i giganto
+# or
+yarn add giganto
+```
+
 # Why Giganto?
 
 <p><code>Giganto</code> simplifies JavaScript, eliminating the hassle of working with arrays, numbers, objects, strings, etc. Modular <code>Giganto</code> methods are great for:</p>
