@@ -345,6 +345,38 @@ _.fill([1, 2, 3, 4], 'N', 1, 3);
 
 #
 
+  <pre>_.findIndex(values, [predicate])</pre>
+  <p>This method is similar to <code>_.find</code>, except that it returns the index of the first element, the predicate returns <code>true</code> instead of the element itself.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The function called at each iteration.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the index of the found element, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.findIndex(users, ({ user }) => user === 'Vic');
+// => 1
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 
