@@ -23,7 +23,6 @@ export { default as some } from './func/collection/some';
 export { default as reduce } from './func/collection/reduce';
 
 // util
-export { default as cache } from './func/util/cache';
 
 // math
 export { default as ceil } from './func/math/ceil';
