@@ -53,7 +53,7 @@ _.dropRightWhile(array, ({ active }) => !active);
 
 <details open>
 <summary>
-  <h2>Array</h2>
+  <b>Array</b>
 </summary>
 
   <pre>_.chunk(values, [size=1])</pre>
