@@ -16,6 +16,30 @@ npm i giganto
 yarn add giganto
 ```
 
+<p>By default, the module supports require:</p>
+
+```js
+const _ = require('giganto');
+const array = [0, 1, false, 2, '', 3, NaN, 4, undefined, 5, 6, Boolean(0)];
+_.compact(array);
+// => [0, 1, 2, 3, 4, 5, 6]
+```
+
+<p>The module also ships with xlsx.mjs for use with import:</p>
+
+```js
+import _ from 'giganto';
+
+const array = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+_.dropRightWhile(array, ({ active }) => !active);
+// => [{ user: 'Ben', active: false }, { user: 'Vic', active: true }]
+```
+
 # Why Giganto?
 
 <p><code>Giganto</code> simplifies JavaScript, eliminating the hassle of working with arrays, numbers, objects, strings, etc. Modular <code>Giganto</code> methods are great for:</p>
