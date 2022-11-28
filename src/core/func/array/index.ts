@@ -13,3 +13,5 @@ export { default as dropWhile } from './dropWhile';
 export { default as fill } from './fill';
 export { default as findIndex } from './findIndex';
 export { default as findLastIndex } from './findLastIndex';
+
+export { default as head } from './head';

@@ -409,6 +409,36 @@ _.findLastIndex(users, ({ user }) => user !== 'Den');
 
 #
 
+  <pre>_.head(values)</pre>
+  <p>Returns the first element of the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(*)</em>: Returns the first element of array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+const users = [
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.head(users);
+// => { user: 'Vic', active: true }
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 
