@@ -1,4 +1,3 @@
-import size from '../collection/size';
 import isArray from '../lang/isArray';
 
 /**
