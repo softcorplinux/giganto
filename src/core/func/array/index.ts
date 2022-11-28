@@ -14,5 +14,6 @@ export { default as fill } from './fill';
 export { default as findIndex } from './findIndex';
 export { default as findLastIndex } from './findLastIndex';
 export { default as flatten } from './flatten';
+export { default as fromPairs } from './fromPairs';
 
 export { default as head } from './head';

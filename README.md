@@ -437,6 +437,34 @@ _.flatten([1, [2, [3, [4]], 5]], 5);
 
 #
 
+  <pre>_.fromPairs(values)</pre>
+  <p>Reverse <code>_.toPairs</code>, this method returns an object consisting of key-value pairs.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The key-value pairs.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Object)</em>: Returns the new object.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.fromPairs([
+  ['a', 1],
+  ['b', 2],
+  ['a', 2],
+]);
+// => {a: 2, b: 2}
+```
+
+  </details>
+
+#
+
   <pre>_.head(values)</pre>
   <p>Returns the first element of the array.</p>
 
