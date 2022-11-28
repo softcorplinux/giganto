@@ -25,7 +25,7 @@ _.compact(array);
 // => [0, 1, 2, 3, 4, 5, 6]
 ```
 
-<p>The module also ships with xlsx.mjs for use with import:</p>
+<p>The module also ships with <code>giganto</code> for use with import:</p>
 
 ```js
 import _ from 'giganto';
