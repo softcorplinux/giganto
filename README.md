@@ -558,6 +558,30 @@ _.indexOf([1, 2, 1, 2, 5], 2);
 
 #
 
+  <pre>_.initial(values)</pre>
+  <p>Returns all elements of the array excluding the last one.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.initial([1, 2, 3]);
+// => [1, 2]
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 
