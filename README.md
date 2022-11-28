@@ -636,6 +636,35 @@ _.intersectionBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], ({ x }) => x);
 
 #
 
+  <pre>_.intersectionWith(values, [args], [predicate])</pre>
+  <p>This method is similar to <code>_.intersectionBy</code>, except that it takes a third predicate argument with two parameters, <code>values: T</code> and <code>args:T</code>. The predicate is called for each element of the array and values to generate a criterion by which they are compared.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[args]</code> <em>{Array}</em>: The values to exclude.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.intersectionWith([1, 2, 3, 6], [4, 5, 2, 2, 1], _.isEqual);
+// => [1, 2]
+
+_.intersectionWith([{ x: 2 }, { x: 1 }], [{ x: 1 }], (a, b) => a.x === b.x);
+// => [{ 'x': 1 }]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
