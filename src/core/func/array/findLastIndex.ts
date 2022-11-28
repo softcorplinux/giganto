@@ -1,9 +1,9 @@
+import size from '../collection/size';
 import isArray from '../lang/isArray';
 import isFunction from '../lang/isFunction';
 
 /**
- * This method is similar to _.find, except that it returns the index of the first element, the predicate returns true
- * instead of the element itself.
+ * This method is similar to _.findIndex, except that it iterates through the elements of the collection from right to left.
  *
  * @static
  * @memberOf _
@@ -21,13 +21,24 @@ import isFunction from '../lang/isFunction';
  *  { user: 'Den', active: false },
  * ];
  *
- * _.findIndex(users, ({ user }) => user === 'Vic');
- * // => 1
+ * _.findLastIndex(users, ({ user }) => user !== 'Den');
+ * // => 2
  */
-export default function findIndex<T>(
+export default function findLastIndex<T>(
   values: T[],
   predicate: (value: T, index?: number, array?: T[]) => boolean,
 ): number | undefined {
   if (!isArray(values) || !predicate || !isFunction(predicate)) return undefined;
-  return values.findIndex(predicate);
+
+  let response = -1;
+  let index = size(values);
+
+  while (index--) {
+    if (predicate(values[index], index, values)) {
+      response = index;
+      break;
+    }
+  }
+
+  return response;
 }

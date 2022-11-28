@@ -377,6 +377,38 @@ _.findIndex(users, ({ user }) => user === 'Vic');
 
 #
 
+  <pre>_.findLastIndex(values, [predicate])</pre>
+  <p>This method is similar to <code>_.findIndex</code>, except that it iterates through the elements of the collection from right to left.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The function called at each iteration.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the index of the found element, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.findLastIndex(users, ({ user }) => user !== 'Den');
+// => 2
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 

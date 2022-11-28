@@ -12,3 +12,4 @@ export { default as dropRightWhile } from './dropRightWhile';
 export { default as dropWhile } from './dropWhile';
 export { default as fill } from './fill';
 export { default as findIndex } from './findIndex';
+export { default as findLastIndex } from './findLastIndex';
