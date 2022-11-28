@@ -315,6 +315,36 @@ _.dropWhile(users, ({ active }) => !active);
 
 #
 
+  <pre>_.fill(values, value, [start=0], [end=values.length])</pre>
+  <p>Creates a new array and fills its elements with the value from the <code>value</code> argument from beginning to end, but not including <code>end</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to fill.</li>
+    <li><code>value</code> <em>(*)</em>: The value to fill array with.</li>
+    <li><code>[start=0]</code> <em>(Number)</em>: The start position.</li>
+    <li><code>[end=values.length]</code> <em>(Number)</em>: The end position.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns new array.</li>
+  </ol>
+
+  <details>
+  <summary><h5>Example</h5></summary>
+
+```js
+_.fill([1, 2, 3, 4], 'N', 0, -2);
+// => ['N', 'N', 3, 4]
+
+_.fill([1, 2, 3, 4], 'N', 1, 3);
+// => [1, 'N', 'N', 4]
+```
+
+  </details>
+
+#
+
   <pre>_.intersection(values, [args])</pre>
   <p>Creates a new array of values, including matches from the <code>args</code> argument.</p>
 

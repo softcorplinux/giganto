@@ -6,15 +6,10 @@ export default function reduce<T, U>(
   initialValue?: U,
 ) {
   if (!isArray(values) || !predicate) return undefined;
-  return values.reduce((previousValue, currentValue, currentIndex, array) =>
-    predicate(previousValue, currentValue, currentIndex, array),
+  return (
+    values.reduce((previousValue, currentValue, currentIndex, array) =>
+      predicate(previousValue, currentValue, currentIndex, array),
+    ),
+    initialValue
   );
 }
-
-const res = reduce(
-  [1, 2, 3],
-  (res, i) => {
-    return res;
-  },
-  [],
-);

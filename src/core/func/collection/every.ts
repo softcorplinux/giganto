@@ -6,5 +6,5 @@ export default function every<T>(
   thisArg?: any,
 ) {
   if (!isArray(values) || !predicate) return undefined;
-  return values.every((value, index, array) => predicate(value, index, array));
+  return values.every((value, index, array) => predicate(value, index, array), thisArg);
 }

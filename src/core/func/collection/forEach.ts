@@ -8,5 +8,5 @@ export default function forEach<T>(
   if (!isArray(values) || !predicate) return undefined;
   return values.forEach((value, index, array) => {
     predicate(value, index, array);
-  });
+  }, thisArg);
 }

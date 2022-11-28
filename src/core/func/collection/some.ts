@@ -6,5 +6,5 @@ export default function some<T>(
   thisArg?: any,
 ) {
   if (!isArray(values) || !predicate) return undefined;
-  return values.some((value, index, array) => predicate(value, index, array));
+  return values.some((value, index, array) => predicate(value, index, array), thisArg);
 }

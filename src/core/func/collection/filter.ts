@@ -6,5 +6,5 @@ export default function filter<T>(
   thisArg?: any,
 ) {
   if (!isArray(values) || !predicate) return undefined;
-  return values.filter((value, index, array) => predicate(value, index, array));
+  return values.filter((value, index, array) => predicate(value, index, array), thisArg);
 }

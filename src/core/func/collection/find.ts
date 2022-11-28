@@ -6,5 +6,5 @@ export default function find<T>(
   thisArg?: any,
 ) {
   if (!isArray(values) || !predicate) return undefined;
-  return values.find((value, index, array) => predicate(value, index, array));
+  return values.find((value, index, array) => predicate(value, index, array), thisArg);
 }

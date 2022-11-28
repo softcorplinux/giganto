@@ -1,16 +1,4 @@
-// array
-export { default as chunk } from './func/array/chunk';
-export { default as compact } from './func/array/compact';
-export { default as concat } from './func/array/concat';
-export { default as difference } from './func/array/difference';
-export { default as intersection } from './func/array/intersection';
-export { default as differenceBy } from './func/array/differenceBy';
-export { default as differenceWith } from './func/array/differenceWith';
-export { default as union } from './func/array/union';
-export { default as drop } from './func/array/drop';
-export { default as dropRight } from './func/array/dropRight';
-export { default as dropRightWhile } from './func/array/dropRightWhile';
-export { default as dropWhile } from './func/array/dropWhile';
+export * from './func/array';
 
 // lang
 export { default as isArray } from './func/lang/isArray';
