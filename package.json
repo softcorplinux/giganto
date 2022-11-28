@@ -1,6 +1,6 @@
 {
   "name": "giganto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Giganto Lib",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -20,8 +20,17 @@
     "url": "git+https://github.com/softcorplinux/giganto.git"
   },
   "keywords": [
-    "Giganto",
-    "Library"
+    "giganto",
+    "library",
+    "modules",
+    "util",
+    "javascript",
+    "typescript",
+    "collection",
+    "utilities",
+    "object",
+    "functions",
+    "array"
   ],
   "author": "Isaikin Victor",
   "license": "ISC",
