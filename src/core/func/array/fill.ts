@@ -30,7 +30,7 @@ export default function fill<T, U>(
   end: number = size(values),
 ): (T | U)[] | undefined {
   if (!isArray(values) || !value) return undefined;
-  let length = size(values);
+  const length = size(values);
   let index = length;
   const response = array(length);
 
