@@ -1,3 +1,4 @@
+import size from '../collection/size';
 import isArray from '../lang/isArray';
 
 /**
@@ -16,5 +17,5 @@ import isArray from '../lang/isArray';
  */
 export default function fromPairs<T>(values: T) {
   if (!isArray(values)) return undefined;
-  return Object.fromEntries(new Set(values));
+  return Object.fromEntries(values);
 }
