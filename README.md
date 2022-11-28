@@ -70,7 +70,7 @@ _.dropRightWhile(array, ({ active }) => !active);
   </ol>
 
   <details>
-  <summary><h5>Example</h5></summary>
+  <summary>Example</summary>
 
 ```js
 _.chunk(['a', 'b', 'c', 'd'], 2);
