@@ -4,7 +4,7 @@ import indexOf from '../../core/func/array/indexOf';
 describe('indexOf', () => {
   const array = [1, 2, 1, 2, 5];
 
-  it('should return new array', () => {
+  it('should return nmuber', () => {
     expect(indexOf(array, 2)).toEqual(1);
   });
 

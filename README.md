@@ -720,6 +720,31 @@ _.last(users);
 
 #
 
+  <pre>_.lastIndexOf(values, value)</pre>
+  <p>This method is similar to <code>_.indexOf</code>, except that it iterates through the array elements from right to left.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to search for.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index of the matched value, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.lastIndexOf([1, 2, 1, 2, 5], 2);
+// => 3
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
