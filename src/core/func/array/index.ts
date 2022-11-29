@@ -22,5 +22,6 @@ export { default as intersectionWith } from './intersectionWith';
 export { default as join } from './join';
 export { default as last } from './last';
 export { default as lastIndexOf } from './lastIndexOf';
+export { default as nth } from './nth';
 
 export { default as union } from './union';
