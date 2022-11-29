@@ -877,6 +877,39 @@ console.log(users);
 
 #
 
+  <pre>_.pullAllWith(values, [args], [predicate])</pre>
+  <p>This method is similar to <code>_.pullAll</code>, except that it takes a predicate, which is called for each element of the array and values to generate a criterion by which they are compared. Predicate is called with two arguments <code>values: T</code> and <code>args: T</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>:The array to modify.</li>
+    <li><code>[args]</code> <em>{Array}</em>: The values to remove.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [
+  { x: 1, y: 2 },
+  { x: 3, y: 4 },
+  { x: 5, y: 6 },
+];
+
+_.pullAllWith(array, [{ x: 3, y: 4 }], _.isEqual);
+console.log(users);
+// => [{ x: 1, y: 2 }, { x: 5, y: 6 }]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
