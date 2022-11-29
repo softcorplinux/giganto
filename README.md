@@ -665,6 +665,31 @@ _.intersectionWith([{ x: 2 }, { x: 1 }], [{ x: 1 }], (a, b) => a.x === b.x);
 
 #
 
+  <pre>_.join(array, [separator=','])</pre>
+  <p>Converts all array elements to a delimited string.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to convert.</li>
+    <li><code>[separator=',']</code> <em>{String}</em>: The element separator.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the joined string.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.join(['a', 'b', 'c'], '~');
+// => 'a~b~c'
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

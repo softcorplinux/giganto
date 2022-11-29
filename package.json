@@ -28,9 +28,9 @@
     "typescript",
     "collection",
     "utilities",
-    "object",
+    "objects",
     "functions",
-    "array"
+    "arrays"
   ],
   "author": "Isaikin Victor",
   "license": "ISC",
