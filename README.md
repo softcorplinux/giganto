@@ -785,12 +785,12 @@ _.nth(users, -3);
 
   <h5>Arguments</h5>
   <ol>
-    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
     <li><code>[num=0]</code> <em>(Number)</em>: The values to remove.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
-    <li><em>(Array)</em>: Returns new array.</li>
+    <li><em>(Array)</em>: Returns array.</li>
   </ol>
 
   <details>
@@ -800,6 +800,7 @@ _.nth(users, -3);
 const array = ['a', 'b', 'c', 'a', 'b', 'c'];
 
 _.pull(array, 'a', 'c');
+console.log(array);
 // => ['b', 'b']
 ```
 
