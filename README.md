@@ -902,7 +902,7 @@ const array = [
 ];
 
 _.pullAllWith(array, [{ x: 3, y: 4 }], _.isEqual);
-console.log(users);
+console.log(array);
 // => [{ x: 1, y: 2 }, { x: 5, y: 6 }]
 ```
 
