@@ -809,7 +809,7 @@ console.log(array);
 #
 
   <pre>_.pullAll(values, [args])</pre>
-  <p>Deletes all the specified values from the array.</p>
+  <p>DThis method is similar to <code>_.pull</code>, deletes all the specified values from the array.</p>
 
   <h5>Arguments</h5>
   <ol>
