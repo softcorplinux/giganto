@@ -25,5 +25,6 @@ export { default as lastIndexOf } from './lastIndexOf';
 export { default as nth } from './nth';
 export { default as pull } from './pull';
 export { default as pullAll } from './pullAll';
+export { default as pullAllBy } from './pullAllBy';
 
 export { default as union } from './union';
