@@ -690,6 +690,36 @@ _.join(['a', 'b', 'c'], '~');
 
 #
 
+  <pre>_.last(values)</pre>
+  <p>Returns the last element of the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(*)</em>: Returns the last element of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.last(users);
+// => { user: 'Den', active: false }
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

@@ -20,5 +20,6 @@ export { default as intersection } from './intersection';
 export { default as intersectionBy } from './intersectionBy';
 export { default as intersectionWith } from './intersectionWith';
 export { default as join } from './join';
+export { default as last } from './last';
 
 export { default as union } from './union';
