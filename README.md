@@ -781,7 +781,7 @@ _.nth(users, -3);
 #
 
   <pre>_.pull(values, [args])</pre>
-  <p>Returns a new array and deletes all the specified values from the array.</p>
+  <p>Deletes all the specified values from the array.</p>
 
   <h5>Arguments</h5>
   <ol>
