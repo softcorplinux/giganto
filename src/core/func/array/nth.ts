@@ -27,7 +27,7 @@ import isInteger from '../lang/isInteger';
  * _.nth(users, -3);
  * // => { user: 'Vic', active: true }
  */
-export default function nth<T, U>(values: T[], num: number = 0): T | undefined {
+export default function nth<T>(values: T[], num: number = 0): T | undefined {
   if (!isArray(values) || !isInteger(num)) return undefined;
   const length = size(values);
 

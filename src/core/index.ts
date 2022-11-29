@@ -21,6 +21,7 @@ export { default as every } from './func/collection/every';
 export { default as forEach } from './func/collection/forEach';
 export { default as some } from './func/collection/some';
 export { default as reduce } from './func/collection/reduce';
+export { default as includes } from './func/collection/includes';
 
 // util
 

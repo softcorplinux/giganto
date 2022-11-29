@@ -780,6 +780,33 @@ _.nth(users, -3);
 
 #
 
+  <pre>_.pull(values, [args])</pre>
+  <p>Returns a new array and deletes all the specified values from the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[num=0]</code> <em>(Number)</em>: The values to remove.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns new array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = ['a', 'b', 'c', 'a', 'b', 'c'];
+
+_.pull(array, 'a', 'c');
+// => ['b', 'b']
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
