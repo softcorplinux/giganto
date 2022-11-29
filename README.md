@@ -745,6 +745,41 @@ _.lastIndexOf([1, 2, 1, 2, 5], 2);
 
 #
 
+  <pre>_.nth(array, [num=0])</pre>
+  <p>Returns an element with the index <code>num</code> of the array. If <code>num</code> is negative, the <code>nth</code> element from the end is returned.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[num=0]</code> <em>(Number)</em>: The index of the element to return.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(*)</em>: Returns the nth element of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+_.nth(users, 2);
+// => { user: 'Nat', active: false }
+
+_.nth(users, -3);
+// => { user: 'Vic', active: true }
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

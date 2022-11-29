@@ -3,15 +3,15 @@ import isArray from '../lang/isArray';
 import isInteger from '../lang/isInteger';
 
 /**
- * Returns an element with the index n of the array. If n is negative, the nth element from the end is returned.
+ * Returns an element with the index num of the array. If num is negative, the nth element from the end is returned.
  *
  * @static
  * @memberOf _
  * @since 1.0.0
  * @category Array
- * @param {Array} values The array to fill.
+ * @param {Array} values The array to query.
  * @param {number} [num=0] The index of the element to return.
- * @returns {Array} Returns the nth element of array.
+ * @returns {*} Returns the nth element of array.
  * @example
  *
  * const users = [
