@@ -786,7 +786,7 @@ _.nth(users, -3);
   <h5>Arguments</h5>
   <ol>
     <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
-    <li><code>[num=0]</code> <em>(Number)</em>: The values to remove.</li>
+    <li><code>[args]</code> <em>(...*)</em>: The values to remove.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
@@ -800,6 +800,34 @@ _.nth(users, -3);
 const array = ['a', 'b', 'c', 'a', 'b', 'c'];
 
 _.pull(array, 'a', 'c');
+console.log(array);
+// => ['b', 'b']
+```
+
+  </details>
+
+#
+
+  <pre>_.pullAll(values, [args])</pre>
+  <p>Deletes all the specified values from the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
+    <li><code>[args]</code> <em>(Array)</em>: The values to remove.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = ['a', 'b', 'c', 'a', 'b', 'c'];
+
+_.pullAll(array, ['a', 'c']);
 console.log(array);
 // => ['b', 'b']
 ```
