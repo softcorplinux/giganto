@@ -28,5 +28,6 @@ export { default as pullAll } from './pullAll';
 export { default as pullAllBy } from './pullAllBy';
 export { default as pullAllWith } from './pullAllWith';
 export { default as pullAt } from './pullAt';
+export { default as remove } from './remove';
 
 export { default as union } from './union';

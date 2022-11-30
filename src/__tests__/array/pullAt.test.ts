@@ -6,6 +6,7 @@ describe('pullAt', () => {
 
   it('should return new array', () => {
     expect(pullAt(array, [0, 2])).toEqual(['b', 'd']);
+    expect(array).toEqual(['a', 'c']);
   });
 
   it('should return undefined expect an array', () => {

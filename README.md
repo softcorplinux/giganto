@@ -940,6 +940,43 @@ console.log(array);
 
 #
 
+  <pre>_.remove(values, [predicate])</pre>
+  <p>Removes all elements from the array for which the predicate returns true, and returns an array of deleted elements. The predicate is called with three arguments: (<code>value</code>, <code>index</code>, <code>array</code>).</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of removed elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+
+const evens = _.remove(users, ({ active }) => !active);
+
+console.log(users);
+// => [{ user: 'Vic', active: true }]
+
+console.log(evens);
+// => [{ user: 'Ben', active: false }, { user: 'Nat', active: false }, { user: 'Den', active: false }]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
