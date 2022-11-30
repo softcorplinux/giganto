@@ -1,4 +1,5 @@
 import isArray from '../lang/isArray';
+import isUndefined from '../lang/isUndefined';
 
 /**
  * This method is similar to _.indexOf, except that it iterates through the array elements from right to left.
@@ -16,6 +17,6 @@ import isArray from '../lang/isArray';
  * // => 3
  */
 export default function lastIndexOf<T>(values: T[], value: T): number | undefined {
-  if (!isArray(values) || !value) return undefined;
+  if (!isArray(values) || isUndefined(value)) return undefined;
   return values.lastIndexOf(value);
 }

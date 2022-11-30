@@ -1,5 +1,6 @@
 import isArray from '../lang/isArray';
 import isEqual from '../lang/isEqual';
+import isUndefined from '../lang/isUndefined';
 import findIndex from './findIndex';
 
 /**
@@ -18,6 +19,6 @@ import findIndex from './findIndex';
  * // => 1
  */
 export default function indexOf<T>(values: T[], value: T): number | undefined {
-  if (!isArray(values) || !value) return undefined;
+  if (!isArray(values) || isUndefined(value)) return undefined;
   return findIndex(values, (i) => isEqual(i, value));
 }

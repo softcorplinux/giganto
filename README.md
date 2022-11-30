@@ -882,7 +882,7 @@ console.log(users);
 
   <h5>Arguments</h5>
   <ol>
-    <li><code>values</code> <em>(Array)</em>:The array to modify.</li>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
     <li><code>[args]</code> <em>{Array}</em>: The values to remove.</li>
     <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
   </ol>
@@ -904,6 +904,36 @@ const array = [
 _.pullAllWith(array, [{ x: 3, y: 4 }], _.isEqual);
 console.log(array);
 // => [{ x: 1, y: 2 }, { x: 5, y: 6 }]
+```
+
+  </details>
+
+#
+
+  <pre>_.pullAt(array, [indexes])</pre>
+  <p>Removes elements from the array corresponding to the indexes and returns an array of deleted elements.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
+    <li><code>[indexes]</code> <em>{Array}</em>: The indexes of elements to remove.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of removed elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = ['a', 'b', 'c', 'd'];
+
+_.pullAt(array, [0, 2]);
+// => ['b', 'd']
+
+console.log(array);
+// => ['a', 'c']
 ```
 
   </details>

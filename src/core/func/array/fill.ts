@@ -1,6 +1,7 @@
 import size from '../collection/size';
 import array from '../lang/array';
 import isArray from '../lang/isArray';
+import isUndefined from '../lang/isUndefined';
 
 /**
  * Creates a new array and fills its elements with the value from the "value" argument from beginning to end,
@@ -29,7 +30,7 @@ export default function fill<T, U>(
   start: number = 0,
   end: number = size(values),
 ): (T | U)[] | undefined {
-  if (!isArray(values) || !value) return undefined;
+  if (!isArray(values) || isUndefined(value)) return undefined;
   const length = size(values);
   let index = length;
   const response = array(length);
