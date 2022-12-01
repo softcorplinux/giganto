@@ -23,7 +23,7 @@ import isUndefined from '../lang/isUndefined';
  *  { user: 'Den', age: 60 }
  * ];
  *
- * _.sortedIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age)
+ * _.sortedIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
  * // => 1
  */
 export default function sortedIndexBy<T>(values: T[], value: T, predicate: (value: T) => any): number | undefined {
