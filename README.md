@@ -964,13 +964,42 @@ const users = [
   { user: 'Den', active: false },
 ];
 
-const evens = _.remove(users, ({ active }) => !active);
+const array = _.remove(users, ({ active }) => !active);
 
 console.log(users);
 // => [{ user: 'Vic', active: true }]
 
-console.log(evens);
+console.log(array);
 // => [{ user: 'Ben', active: false }, { user: 'Nat', active: false }, { user: 'Den', active: false }]
+```
+
+  </details>
+
+#
+
+  <pre>_.reverse(values)</pre>
+  <p>Returns an array in reverse order.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [1, 2, 3];
+
+_.reverse(array);
+// => [3, 2, 1]
+
+console.log(array);
+// => [3, 2, 1]
 ```
 
   </details>

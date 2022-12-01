@@ -22,12 +22,12 @@ import isFunction from '../lang/isFunction';
  *  { user: 'Den', active: false }
  * ];
  *
- * const evens = _.remove(users, ({active}) => !active);
+ * const array = _.remove(users, ({active}) => !active);
  *
  * console.log(users);
  * // => [{ user: 'Vic', active: true }]
  *
- * console.log(evens);
+ * console.log(array);
  * // => [{ user: 'Ben', active: false }, { user: 'Nat', active: false }, { user: 'Den', active: false }]
  */
 export default function remove<T>(
