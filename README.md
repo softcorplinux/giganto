@@ -1037,6 +1037,33 @@ _.slice(array, 1);
 
 #
 
+  <pre>_.sortedIndex(values, value)</pre>
+  <p>Uses binary search to determine the smallest index by which the value should be inserted into the array to preserve the sort order.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The sorted array to inspect.</li>
+    <li><code>[value]</code> <em>(*)</em>: The value to evaluate.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index at which value should be inserted into array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [30, 50, 60, 70];
+
+_.sortedIndex(array, 40);
+// => 1
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

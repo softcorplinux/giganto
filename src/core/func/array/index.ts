@@ -31,5 +31,6 @@ export { default as pullAt } from './pullAt';
 export { default as remove } from './remove';
 export { default as reverse } from './reverse';
 export { default as slice } from './slice';
+export { default as sortedIndex } from './sortedIndex';
 
 export { default as union } from './union';
