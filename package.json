@@ -58,5 +58,8 @@
         "tsconfig": "jestconfig.json"
       }
     }
+  },
+  "dependencies": {
+    "tslib": "^2.4.1"
   }
 }
