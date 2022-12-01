@@ -1037,7 +1037,7 @@ _.slice(array, 1);
 
 #
 
-  <pre>_.sortedIndex(values, value)</pre>
+  <pre>_.sortedIndex(values, [value])</pre>
   <p>Uses binary search to determine the smallest index by which the value should be inserted into the array to preserve the sort order.</p>
 
   <h5>Arguments</h5>
@@ -1057,6 +1057,38 @@ _.slice(array, 1);
 const array = [30, 50, 60, 70];
 
 _.sortedIndex(array, 40);
+// => 1
+```
+
+  </details>
+
+#
+
+  <pre>_.sortedIndexBy(values, [value], [predicate])</pre>
+  <p>This method is similar to <code>_.sortedIndex</code>, except that it takes a predicate, which is called for the value and each element of the array to calculate their sort rank. Predict is called with a single argument <code>values: T</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The sorted array to inspect.</li>
+    <li><code>[value]</code> <em>(*)</em>: The value to evaluate.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index at which value should be inserted into array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Ben', age: 30 },
+  { user: 'Nat', age: 50 },
+  { user: 'Den', age: 60 },
+];
+
+_.sortedIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
 // => 1
 ```
 
