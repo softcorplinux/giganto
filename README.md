@@ -1006,6 +1006,37 @@ console.log(array);
 
 #
 
+  <pre>_.slice(values, [start=0], [end=values.length])</pre>
+  <p>Creates a fragment of the array from the beginning to, but not including the end.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to modify.</li>
+    <li><code>[start=0]</code> <em>(Number)</em>: The start position.</li>
+    <li><code>[end=values.length]</code> <em>(Number)</em>: The end position.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [1, 2, 3];
+
+_.slice(array, 1, 2);
+// => [2]
+
+_.slice(array, 1);
+// => [2, 3]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

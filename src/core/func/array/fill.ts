@@ -13,8 +13,8 @@ import isUndefined from '../lang/isUndefined';
  * @category Array
  * @param {Array} values The array to fill.
  * @param {*} value The value to fill array with.
- * @param {number} [start=0] The start position.
- * @param {number} [end=values.length] The end position.
+ * @param {Number} [start=0] The start position.
+ * @param {Number} [end=values.length] The end position.
  * @returns {Array} Returns new array.
  * @example
  *
