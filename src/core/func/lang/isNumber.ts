@@ -1,3 +1,4 @@
+import isNaN from '../lang/isNaN';
 /**
  * Checks if `value` is classified as a `Number` primitive or object.
  *

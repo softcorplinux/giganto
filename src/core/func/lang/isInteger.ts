@@ -1,3 +1,5 @@
+import isNaN from '../lang/isNaN';
+
 /**
  * Checks if `value` is an integer.
  *

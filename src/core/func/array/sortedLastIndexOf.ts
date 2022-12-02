@@ -2,6 +2,7 @@ import size from '../collection/size';
 import eq from '../lang/eq';
 import isArray from '../lang/isArray';
 import isUndefined from '../lang/isUndefined';
+import isNaN from '../lang/isNaN';
 import sortedLastIndexBy from './sortedLastIndexBy';
 
 /**
