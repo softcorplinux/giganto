@@ -1157,6 +1157,41 @@ _.sortedIndexBy(array, 5);
 
 #
 
+  <pre>_.sortedLastIndexBy(values, value, [predicate])</pre>
+  <p>This method is similar to <code>_.sortedLastIndex</code>, except that it takes a predicate, which is called for the value and
+ * each element of the array to calculate their sort rank. Predict is called with a single argument <code>value: T</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The sorted array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to evaluate.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index at which value should be inserted into array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Ben', age: 30 },
+  { user: 'Vic', age: 40 },
+  { user: 'Vic', age: 40 },
+  { user: 'Nat', age: 50 },
+  { user: 'Den', age: 60 },
+];
+
+_.sortedLastIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
+// => 3
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
