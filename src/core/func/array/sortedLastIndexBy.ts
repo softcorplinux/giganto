@@ -12,9 +12,9 @@ import isUndefined from '../lang/isUndefined';
  * @since 1.0.0
  * @category Array
  * @param {Array} values The sorted array to inspect.
- * @param {*} value The value to evaluate.
+ * @param {*} [value] The value to evaluate.
  * @param {Function} [predicate] The predicate called for each element.
- * @returns {Number} Returns the index at which value should be inserted into array.
+ * @returns {Array} Returns the index at which value should be inserted into array.
  * @example
  *
  * const users = [
@@ -26,7 +26,7 @@ import isUndefined from '../lang/isUndefined';
  * _.sortedIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
  * // => 1
  */
-export default function sortedIndexBy<T>(values: T[], value: T, predicate: (value: T) => any): number | undefined {
+export default function sortedLastIndexBy<T>(values: T[], value: T, predicate: (value: T) => any): number | undefined {
   if (!isArray(values) || isUndefined(value) || !predicate || !isFunction(predicate)) return undefined;
   let length = size(values);
   let index = 0;
@@ -35,7 +35,7 @@ export default function sortedIndexBy<T>(values: T[], value: T, predicate: (valu
   while (index < length) {
     const pos = (length + index) >>> 1;
     const computed = predicate(values[pos]);
-    !isUndefined(computed) && computed < value ? (index = pos + 1) : (length = pos);
+    !isUndefined(computed) && computed <= value ? (index = pos + 1) : (length = pos);
   }
 
   return length;

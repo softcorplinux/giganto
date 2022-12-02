@@ -1130,6 +1130,33 @@ _.sortedIndexOf(array, 41);
 
 #
 
+  <pre>_.sortedLastIndex(values, value)</pre>
+  <p>This method is similar to <code>_.sortedIndex</code>, except that it returns the highest index by which the value should be inserted into the array to preserve the sort order.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to evaluate.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index at which value should be inserted into array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [4, 5, 5, 5, 6];
+
+_.sortedIndexBy(array, 5);
+// => 4
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

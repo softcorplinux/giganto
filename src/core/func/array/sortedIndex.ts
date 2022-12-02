@@ -1,4 +1,3 @@
-import size from '../collection/size';
 import isArray from '../lang/isArray';
 import isUndefined from '../lang/isUndefined';
 import sortedIndexBy from './sortedIndexBy';
@@ -12,8 +11,8 @@ import sortedIndexBy from './sortedIndexBy';
  * @since 1.0.0
  * @category Array
  * @param {Array} values The sorted array to inspect.
- * @param {*} [value] The value to evaluate.
- * @returns {Array} Returns the index at which value should be inserted into array.
+ * @param {*} value The value to evaluate.
+ * @returns {Number} Returns the index at which value should be inserted into array.
  * @example
  *
  * const array = [30, 50, 60, 70];
