@@ -540,6 +540,7 @@ _.head(users);
   <ol>
     <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
     <li><code>value</code> <em>(*)</em>: The value to search for.</li>
+    <li><code>[fromIndex=0]</code> <em>(Number)</em>: The value to search for.</li>
   </ol>
   <h5>Returns</h5>
     <ol>
@@ -552,6 +553,9 @@ _.head(users);
 ```js
 _.indexOf([1, 2, 1, 2, 5], 2);
 // => 1
+
+_.indexOf([1, 2, 1, 2, 5], 2, 3);
+// => 3
 ```
 
   </details>
@@ -1090,6 +1094,36 @@ const users = [
 
 _.sortedIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
 // => 1
+```
+
+  </details>
+
+#
+
+  <pre>_.sortedIndexOf(values, value)</pre>
+  <p>This method is similar to <code>_.indexOf</code>, except that it performs a binary search on a sorted array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to search for.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index of the matched value, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [40, 50, 50, 50, 60];
+
+_.sortedIndexOf(array, 50);
+// => 1
+
+_.sortedIndexOf(array, 41);
+// => -1
 ```
 
   </details>

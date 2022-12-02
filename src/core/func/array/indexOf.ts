@@ -12,13 +12,17 @@ import findIndex from './findIndex';
  * @category Array
  * @param {Array} values The array to inspect.
  * @param {*} value The value to search for.
+ * @param {Number} [fromIndex=0] The value to search for.
  * @returns {Number} Returns the index of the matched value, else -1.
  * @example
  *
  * _.indexOf([1, 2, 1, 2, 5], 2);
  * // => 1
+ *
+ * _.indexOf([1, 2, 1, 2, 5], 2, 3);
+ * // => 3
  */
-export default function indexOf<T>(values: T[], value: T): number | undefined {
+export default function indexOf<T>(values: T[], value: T, fromIndex: number = 0): number | undefined {
   if (!isArray(values) || isUndefined(value)) return undefined;
-  return findIndex(values, (i) => isEqual(i, value));
+  return values.indexOf(value, fromIndex);
 }

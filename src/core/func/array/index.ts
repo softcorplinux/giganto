@@ -33,5 +33,6 @@ export { default as reverse } from './reverse';
 export { default as slice } from './slice';
 export { default as sortedIndex } from './sortedIndex';
 export { default as sortedIndexBy } from './sortedIndexBy';
+export { default as sortedIndexOf } from './sortedIndexOf';
 
 export { default as union } from './union';

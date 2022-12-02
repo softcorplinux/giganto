@@ -1,6 +1,7 @@
 import size from '../collection/size';
 import isArray from '../lang/isArray';
 import isUndefined from '../lang/isUndefined';
+import sortedIndexBy from './sortedIndexBy';
 
 /**
  * Uses binary search to determine the smallest index by which the value should be inserted into the array
@@ -22,14 +23,5 @@ import isUndefined from '../lang/isUndefined';
  */
 export default function sortedIndex<T>(values: T[], value: T): number | undefined {
   if (!isArray(values) || isUndefined(value)) return undefined;
-  let length = size(values);
-  let index = 0;
-
-  while (index < length) {
-    const pos = (length + index) >>> 1;
-    const computed = values[pos];
-    !isUndefined(computed) && computed < value ? (index = pos + 1) : (length = pos);
-  }
-
-  return length;
+  return sortedIndexBy(values, value, (i) => i);
 }
