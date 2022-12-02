@@ -1192,6 +1192,36 @@ _.sortedLastIndexBy(users, { user: 'Vic', age: 40 }, ({ age }) => age);
 
 #
 
+  <pre>_.sortedLastIndexOf(values, value)</pre>
+  <p>This method is similar to <code>_.lastIndexOf</code>, except that it performs a binary search on a sorted array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>value</code> <em>(*)</em>: The value to search for.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the index of the matched value, else -1.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = [40, 50, 50, 50, 60];
+
+_.sortedIndexOf(array, 50);
+// => 3
+
+_.sortedIndexOf(array, 41);
+// => -1
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
