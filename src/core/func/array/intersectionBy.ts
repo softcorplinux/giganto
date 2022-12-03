@@ -1,6 +1,7 @@
-import filter from '../collection/filter';
 import isArray from '../lang/isArray';
+import isEqual from '../lang/isEqual';
 import isFunction from '../lang/isFunction';
+import intersectionWith from './intersectionWith';
 
 /**
  * This method is similar to _.intersection, except that it takes the third predicate argument,
@@ -25,13 +26,5 @@ import isFunction from '../lang/isFunction';
  */
 export default function intersectionBy<T>(values: T[], args: T[], predicate: (value: T) => any): T[] | undefined {
   if (!isArray(values) || !isArray(args) || !predicate || !isFunction(predicate)) return undefined;
-  const setA = new Set(values);
-  const setB = new Set(args.map((i) => predicate(i)));
-  return [
-    ...new Set(
-      filter([...setA], (i) => {
-        return setB.has(predicate(i));
-      }),
-    ),
-  ];
+  return intersectionWith(values, args, (a, b) => isEqual(predicate(a), predicate(b)));
 }

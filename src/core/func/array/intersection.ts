@@ -1,5 +1,6 @@
-import filter from '../collection/filter';
 import isArray from '../lang/isArray';
+import isEqual from '../lang/isEqual';
+import intersectionWith from './intersectionWith';
 
 /**
  * Creates a new array of values, including matches from the args argument.
@@ -18,7 +19,5 @@ import isArray from '../lang/isArray';
  */
 export default function intersection<T>(values: T[], args: T[]): T[] | undefined {
   if (!isArray(values) || !isArray(args)) return undefined;
-  const setA = new Set(values);
-  const setB = new Set(args);
-  return [...new Set(filter([...setA], (i) => setB.has(i)))];
+  return intersectionWith(values, args, (a, b) => isEqual(a, b));
 }
