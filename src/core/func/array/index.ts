@@ -39,5 +39,6 @@ export { default as sortedLastIndexBy } from './sortedLastIndexBy';
 export { default as sortedLastIndexOf } from './sortedLastIndexOf';
 export { default as tail } from './tail';
 export { default as take } from './take';
+export { default as takeRight } from './takeRight';
 
 export { default as union } from './union';

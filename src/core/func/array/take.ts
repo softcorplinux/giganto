@@ -1,8 +1,7 @@
-import size from '../collection/size';
 import isArray from '../lang/isArray';
 
 /**
- * Creates a fragment of an array with n elements taken from the beginning. It is possible to use a negative value of n.
+ * Creates a fragment of an array with n elements taken from the beginning.
  *
  * @static
  * @memberOf _
@@ -24,11 +23,8 @@ import isArray from '../lang/isArray';
  *
  * _.take([1, 2, 3], 0);
  * // => []
- *
- * _.take(array, -1);
- * // => [1, 2]
  */
 export default function take<T>(values: T[], num: number = 1): T[] | undefined {
   if (!isArray(values)) return undefined;
-  return values.slice(0, num);
+  return values.slice(0, num < 0 ? 0 : num);
 }
