@@ -1222,6 +1222,30 @@ _.sortedIndexOf(array, 41);
 
 #
 
+  <pre>_.tail(values)</pre>
+  <p>Gets everything except the first element of the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.tail([1, 2, 3]);
+// => [2, 3]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 

@@ -37,5 +37,6 @@ export { default as sortedIndexOf } from './sortedIndexOf';
 export { default as sortedLastIndex } from './sortedLastIndex';
 export { default as sortedLastIndexBy } from './sortedLastIndexBy';
 export { default as sortedLastIndexOf } from './sortedLastIndexOf';
+export { default as tail } from './tail';
 
 export { default as union } from './union';
