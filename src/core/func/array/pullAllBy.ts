@@ -1,6 +1,7 @@
-import size from '../collection/size';
 import isArray from '../lang/isArray';
+import isEqual from '../lang/isEqual';
 import isFunction from '../lang/isFunction';
+import pullAllWith from './pullAllWith';
 
 /**
  * This method is similar to _.pullAll, except that it takes a predicate, which is called for each
@@ -30,14 +31,5 @@ import isFunction from '../lang/isFunction';
  */
 export default function pullAllBy<T>(values: T[], args: T[], predicate: (value: T) => any): T[] | undefined {
   if (!isArray(values) || !isArray(args) || !predicate || !isFunction(predicate)) return undefined;
-  let index = size(values);
-  const setB = new Set(args.map((i) => predicate(i)));
-
-  while (index--) {
-    if (setB.has(predicate(values[index]))) {
-      values.splice(index, 1);
-    }
-  }
-
-  return values;
+  return pullAllWith(values, args, (a, b) => isEqual(predicate(a), predicate(b)));
 }

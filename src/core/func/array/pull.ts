@@ -1,7 +1,7 @@
 import { Many } from '../../types/common';
-import includes from '../collection/includes';
-import size from '../collection/size';
 import isArray from '../lang/isArray';
+import isEqual from '../lang/isEqual';
+import pullAllWith from './pullAllWith';
 
 /**
  * Deletes all the specified values from the array.
@@ -23,13 +23,5 @@ import isArray from '../lang/isArray';
  */
 export default function pull<T>(values: T[], ...args: Many<T>[]): typeof args | undefined {
   if (!isArray(values) || !isArray(args)) return undefined;
-  let index = size(values);
-
-  while (index--) {
-    if (includes(args, values[index])) {
-      values.splice(index, 1);
-    }
-  }
-
-  return values;
+  return pullAllWith(values, args, isEqual);
 }

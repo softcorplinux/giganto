@@ -1,6 +1,7 @@
 import { Many } from '../../types/common';
 import isArray from '../lang/isArray';
-import pull from './pull';
+import isEqual from '../lang/isEqual';
+import pullAllWith from './pullAllWith';
 
 /**
  * This method is similar to _.pull, deletes all the specified values from the array.
@@ -22,5 +23,5 @@ import pull from './pull';
  */
 export default function pullAll<T>(values: T[], args: Many<T>[]): typeof args | undefined {
   if (!isArray(values) || !isArray(args)) return undefined;
-  return pull(values, ...args);
+  return pullAllWith(values, args, isEqual);
 }
