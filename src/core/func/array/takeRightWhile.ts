@@ -40,7 +40,6 @@ export default function takeRightWhile<T>(
     if (!predicate(values[index], index, values)) {
       resIndex = index;
       break;
-    } else {
     }
   }
 
