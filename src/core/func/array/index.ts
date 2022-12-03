@@ -41,5 +41,6 @@ export { default as tail } from './tail';
 export { default as take } from './take';
 export { default as takeRight } from './takeRight';
 export { default as takeRightWhile } from './takeRightWhile';
+export { default as takeWhile } from './takeWhile';
 
 export { default as union } from './union';

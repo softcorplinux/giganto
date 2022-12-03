@@ -1352,6 +1352,38 @@ _.takeRightWhile(users, ({ active }) => !active);
 
 #
 
+  <pre>_.takeWhile(values, [predicate])</pre>
+  <p>Creates a fragment of an array with elements taken from the beginning. Elements are taken until the predicate returns false. The predicate is called with three arguments: (<code>value</code>, <code>index</code>, <code>array</code>). Only <code>value</code> is required, the rest of the predicate arguments are optional.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The function called at each iteration.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const users = [
+  { user: 'Ben', active: true },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: true },
+];
+
+_.takeRightWhile(users, ({ active }) => !active);
+// => [{ user: 'Ben', active: true }, { user: 'Vic', active: true }]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
