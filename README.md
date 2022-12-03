@@ -1376,7 +1376,7 @@ const users = [
   { user: 'Den', active: true },
 ];
 
-_.takeRightWhile(users, ({ active }) => !active);
+_.takeWhile(users, ({ active }) => active);
 // => [{ user: 'Ben', active: true }, { user: 'Vic', active: true }]
 ```
 
