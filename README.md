@@ -1246,6 +1246,43 @@ _.tail([1, 2, 3]);
 
 #
 
+  <pre>_.take(array, [num=1])</pre>
+  <p>Creates a fragment of an array with <code>n</code> elements taken from the beginning. It is possible to use a negative value of <code>n</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to query.</li>
+    <li><code>[num=1</code> <em>(Number)</em>: The number of elements to take.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Number)</em>: Returns the slice of array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.take([1, 2, 3]);
+// => [1]
+
+_.take([1, 2, 3], 2);
+// => [1, 2]
+
+_.take([1, 2, 3], 5);
+// => [1, 2, 3]
+
+_.take([1, 2, 3], 0);
+// => []
+
+_.take(array, -1);
+// => [1, 2]
+```
+
+  </details>
+
+#
+
   <pre>_.union([...args])</pre>
   <p>Creates a new array of unique values.</p>
 
