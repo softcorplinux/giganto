@@ -14,3 +14,4 @@ export type ListIteratee<T> = ListIterator<T, NotVoid> | IterateeShorthand<T>;
 export type ListIteratorTypeGuard<T, S extends T> = (value: T, index: number, collection: List<T>) => value is S;
 export type StringIterator<TResult> = (char: string, index: number, string: string) => TResult;
 export type RestCallback<T> = [...Many<T>[], (value: T) => any];
+export type RestCallbackCompare<T> = [...Many<T>[], (a: T, b: T) => any];

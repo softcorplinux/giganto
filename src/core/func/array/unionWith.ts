@@ -1,90 +1,59 @@
-import { Many } from '../../types/common';
-import filter from '../collection/filter';
-import find from '../collection/find';
-import includes from '../collection/includes';
+import { Many, RestCallback } from '../../types/common';
 import size from '../collection/size';
 import isArray from '../lang/isArray';
-import isEqual from '../lang/isEqual';
 import isFunction from '../lang/isFunction';
+import last from './last';
+import union from './union';
 
 /**
- * Creates a new array of unique values.
+ * This method is similar to _.union, except that it accepts a comparator that is called to compare array elements.
+ * Returns only a unique value. Predicate is called with one argument args: T
  *
  * @static
  * @memberOf _
  * @since 1.0.0
  * @category Array
- * @param {Array} args The arrays to inspect.
+ * @param {...*} args The arrays to inspect.
+ * @param {Function} [predicate] The predicate called for each element.
  * @returns {Array} Returns the new array of combined values.
  * @example
  *
- * _.union([2], [1, 2, 5, 2]);
- * // => [2, 1, 5]
+ * const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
+ * const others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
  *
- * _.union(2, 2, 3, 3, 1);
- * // => [2, 3, 1]
+ * _.unionWith(objects, others, ({ x }) => isEqual(x, 2));
+ * // => [{x: 2, y: 1}]
  *
- * _.union(2, 2, 3, 3, 1, [4], [1]);
- * // => [2, 3, 1, 4]
+ * const users = [
+ *  { user: 'Ben', active: false },
+ *  { user: 'Vic', active: true },
+ *  { user: 'Nat', active: false },
+ *  { user: 'Den', active: false }
+ * ];
+ * _.unionWith(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false }], ({ user }) => user.startsWith('N') && user.endsWith('t'));
+ * // => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
  */
-export default function unionWith<T>(values: T[], args: T[], predicate: (a: T, b: T) => boolean): T[] | undefined {
-  if (!isArray(values) || !isArray(args) || !predicate || !isFunction(predicate)) return undefined;
+export default function unionWith<T>(...args: RestCallback<T>): Many<T>[] | undefined {
+  if (!isArray(args)) return undefined;
+  const predicate = last(args) as (value: T) => any;
+
+  if (!predicate || !isFunction(predicate)) return undefined;
+
+  const arr = union(...(args as Many<T>[]));
   const set = new Set();
-  values = [...values, ...args];
-  const length = size(values);
+  const length = size(arr) - 1;
   let index = -1;
-  const response: T[] = [];
+  const response: Many<T>[] = [];
 
   while (++index < length) {
-    const value = predicate(values[index], values[index]);
+    const value = predicate(arr[index]);
+    const stringify = JSON.stringify(arr[index]);
 
-    if (!set.has(value)) {
-      set.add(value);
-      response.push(values[index]);
+    if (value && !set.has(stringify)) {
+      set.add(stringify);
+      response.push(arr[index]);
     }
   }
 
   return response;
-
-  // const setA = new Set(values.map((i) => JSON.stringify(i)));
-  // const setB = new Set(args.map((i) => JSON.stringify(i)));
-  // return [
-  //   ...new Set(filter([...setA], (i) => !size(filter([...setB], (j) => predicate(JSON.parse(i), JSON.parse(j)))))),
-  // ];
-  // return [...new Set([...values, ...args].map((i: any) => JSON.stringify(i)))]
-  //   .map((i) => JSON.parse(i))
-  //   .filter((i, k, arr) => {
-  //     // console.log(k, JSON.parse(i), arr);
-
-  //     // return arr.filter((j) => predicate(JSON.parse(i), JSON.parse(i)));
-  //     return predicate(i, i);
-  //   });
-  // console.log(1111, set);
-
-  // console.log('[...values, ...args]', [...values, ...args]);
-
-  // [...values, ...args].reduce((acc, cur) => {
-  //   // if(Array.isArray(acc) && Array.isArray(cur)){
-  //   console.log('acc', acc, cur);
-
-  //   //  acc=[...acc,...cur];
-  //   return acc;
-  //   // }
-  // });
-
-  // console.log(
-  //   111,
-  //   response.filter((j, k) => predicate(response[1], j)),
-  // );
-
-  // const response = [...values, ...args];
-  // let index = size(response);
-
-  // while (index--) {
-  //   if (size(filter(response, (j) => predicate(response[index], j))) > 1) {
-  //     response.splice(index, 1);
-  //   }
-  // }
-
-  // return response;
 }

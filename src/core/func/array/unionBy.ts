@@ -33,7 +33,6 @@ import union from './union';
  */
 export default function unionBy<T>(...args: RestCallback<T>): Many<T>[] | undefined {
   if (!isArray(args)) return undefined;
-
   const predicate = last(args) as (value: T) => any;
 
   if (!predicate || !isFunction(predicate)) return undefined;

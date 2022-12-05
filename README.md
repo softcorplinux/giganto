@@ -1446,4 +1446,52 @@ _.unionBy(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false 
 
   </details>
 
+#
+
+  <pre>_.unionWith[...args], [predicate])</pre>
+  <p>This method is similar to _.union, except that it accepts a comparator that is called to compare array elements. Returns only a unique value. Predicate is called with one argument <code>args: T</code></p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>[...args]</code> <em>(...*)</em>: The arrays to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of combined values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+const others = [
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
+
+_.unionWith(objects, others, ({ x }) => isEqual(x, 2));
+// => [{x: 2, y: 1}]
+
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+_.unionWith(
+  users,
+  [{ user: 'Nat', active: true }],
+  [{ user: 'Lat', active: false }],
+  ({ user }) => user.startsWith('N') && user.endsWith('t'),
+);
+// => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
+```
+
+  </details>
+
 </details>
