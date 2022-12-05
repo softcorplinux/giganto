@@ -1414,7 +1414,7 @@ _.union(2, 2, 3, 3, 1, [4], [1]);
 
 #
 
-  <pre>_.union([...args])</pre>
+  <pre>_.unionBy[...args], [predicate])</pre>
   <p>This method is similar to _.union, except that it uses an iteration that is called for each element of each array to generate a criterion by which uniqueness is calculated. The resulting values are selected from the first array in which this value occurs. Predicate is called with one argument <code>args: T</code></p>
 
   <h5>Arguments</h5>
