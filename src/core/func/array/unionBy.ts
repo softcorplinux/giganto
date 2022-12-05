@@ -1,4 +1,4 @@
-import { Many } from '../../types/common';
+import { Many, RestCallback } from '../../types/common';
 import size from '../collection/size';
 import isArray from '../lang/isArray';
 import isFunction from '../lang/isFunction';
@@ -31,7 +31,7 @@ import union from './union';
  * _.unionBy( users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false }], ({ active }) => active);
  * // => [{ user: 'Ben', active: false }, { user: 'Vic', active: true }]
  */
-export default function unionBy<T>(...args: [...Many<T>[], (value: T) => any]): Many<T>[] | undefined {
+export default function unionBy<T>(...args: RestCallback<T>): Many<T>[] | undefined {
   if (!isArray(args)) return undefined;
 
   const predicate = last(args) as (value: T) => any;
