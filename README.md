@@ -1449,7 +1449,7 @@ _.unionBy(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false 
 #
 
   <pre>_.unionWith[...args], [predicate])</pre>
-  <p>This method is similar to _.union, except that it accepts a comparator that is called to compare array elements. Returns only a unique value. Predicate is called with one argument <code>args: T</code></p>
+  <p>This method is similar to _.union, except that it accepts a comparator that is called to compare array elements. Returns only a unique values. Predicate is called with one argument <code>args: T</code></p>
 
   <h5>Arguments</h5>
   <ol>
