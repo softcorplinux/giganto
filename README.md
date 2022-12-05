@@ -1411,4 +1411,39 @@ _.union(2, 2, 3, 3, 1, [4], [1]);
 ```
 
   </details>
+
+#
+
+  <pre>_.union([...args])</pre>
+  <p>This method is similar to _.union, except that it uses an iteration that is called for each element of each array to generate a criterion by which uniqueness is calculated. The resulting values are selected from the first array in which this value occurs. Predicate is called with one argument <code>args: T</code></p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>[...args]</code> <em>(...*)</em>: The arrays to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of combined values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.unionBy([2.1], [1.2, 2.3], Math.floor);
+// => [2.1, 1.2]
+
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+_.unionBy(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false }], ({ active }) => active);
+// => [{ user: 'Ben', active: false }, { user: 'Vic', active: true }]
+```
+
+  </details>
+
 </details>
