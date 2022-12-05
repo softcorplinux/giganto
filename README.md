@@ -1414,8 +1414,8 @@ _.union(2, 2, 3, 3, 1, [4], [1]);
 
 #
 
-  <pre>_.unionBy[...args], [predicate])</pre>
-  <p>This method is similar to _.union, except that it uses an iteration that is called for each element of each array to generate a criterion by which uniqueness is calculated. The resulting values are selected from the first array in which this value occurs. Predicate is called with one argument <code>args: T</code></p>
+  <pre>_.unionBy([...args], [predicate])</pre>
+  <p>This method is similar to <code>_.union</code>, except that it uses an iteration that is called for each element of each array to generate a criterion by which uniqueness is calculated. The resulting values are selected from the first array in which this value occurs. Predicate is called with one argument <code>args: T</code></p>
 
   <h5>Arguments</h5>
   <ol>
@@ -1448,8 +1448,8 @@ _.unionBy(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false 
 
 #
 
-  <pre>_.unionWith[...args], [predicate])</pre>
-  <p>This method is similar to _.union, except that it accepts a comparator that is called to compare array elements. Returns only a unique values. Predicate is called with one argument <code>args: T</code></p>
+  <pre>_.unionWith([...args], [predicate])</pre>
+  <p>This method is similar to <code>_.union</code>, except that it accepts a comparator that is called to compare array elements. Returns only a unique values. Predicate is called with one argument <code>args: T</code></p>
 
   <h5>Arguments</h5>
   <ol>
@@ -1489,6 +1489,107 @@ _.unionWith(
   [{ user: 'Nat', active: false }],
   ({ user }) => user.startsWith('N') && user.endsWith('t'),
 );
+// => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
+```
+
+  </details>
+
+#
+
+  <pre>_.uniq(values)</pre>
+  <p>Creates a version of the array without duplicates, using some null value for equality comparison, in which only the first occurrence of each element is stored. The order of the resulting values is determined by the order in which they appear in the array.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new duplicate free array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.uniq([2, 1, 2]);
+// => [2, 1]
+```
+
+  </details>
+
+#
+
+  <pre>_.uniqBy(values, [predicate])</pre>
+  <p>This method is similar to <code>_.uniq</code>, except that it takes a predicate, which is called for each element in the array to generate a criterion by which uniqueness is calculated. The order of the resulting values is determined by the order in which they appear in the array. Predict is called with a single argument <code>values: T</code></p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new duplicate free array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.uniqBy([2.1, 1.2, 2.3], Math.floor);
+// => [2.1, 1.2]
+
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+_.uniqBy(users, ({ active }) => active);
+// => [{ user: 'Ben', active: false }, { user: 'Vic', active: true }]
+```
+
+  </details>
+
+#
+
+  <pre>_.uniqWith(values, [predicate])</pre>
+  <p>This method is similar to <code>_.uniq</code>, except that it accepts a comparator that is called to compare array elements. The order of the resulting values is determined by the order in which they appear in the array. Returns only a unique value. Predicate is called with one argument <code>values: T</code></p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new duplicate free array.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
+
+_.uniqWith(objects, ({ y }) => isEqual(y, 2));
+// => [{ x: 1, y: 2 }]
+
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+  { user: 'Nat', active: true },
+  { user: 'Nat', active: false },
+];
+_.uniqWith(users, ({ user }) => user.startsWith('N') && user.endsWith('t'));
 // => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
 ```
 

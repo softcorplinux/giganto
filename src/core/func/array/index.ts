@@ -45,3 +45,6 @@ export { default as takeWhile } from './takeWhile';
 export { default as union } from './union';
 export { default as unionBy } from './unionBy';
 export { default as unionWith } from './unionWith';
+export { default as uniq } from './uniq';
+export { default as uniqBy } from './uniqBy';
+export { default as uniqWith } from './uniqWith';
