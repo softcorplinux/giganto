@@ -30,7 +30,7 @@ import union from './union';
  *  { user: 'Nat', active: false },
  *  { user: 'Den', active: false }
  * ];
- * _.unionWith(users, [{ user: 'Nat', active: true }], [{ user: 'Lat', active: false }], ({ user }) => user.startsWith('N') && user.endsWith('t'));
+ * _.unionWith(users, [{ user: 'Nat', active: true }], [{ user: 'Nat', active: false }], ({ user }) => user.startsWith('N') && user.endsWith('t'));
  * // => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
  */
 export default function unionWith<T>(...args: RestCallback<T>): Many<T>[] | undefined {

@@ -24,7 +24,7 @@ describe('unionBy', () => {
       unionWith(
         array,
         [{ user: 'Nat', active: true }],
-        [{ user: 'Lat', active: false }],
+        [{ user: 'Nat', active: false }],
         ({ user }) => user.startsWith('N') && user.endsWith('t'),
       ),
     ).toEqual([

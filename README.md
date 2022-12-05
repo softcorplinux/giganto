@@ -1486,7 +1486,7 @@ const users = [
 _.unionWith(
   users,
   [{ user: 'Nat', active: true }],
-  [{ user: 'Lat', active: false }],
+  [{ user: 'Nat', active: false }],
   ({ user }) => user.startsWith('N') && user.endsWith('t'),
 );
 // => [{ user: 'Nat', active: false }, { user: 'Nat', active: true }]
