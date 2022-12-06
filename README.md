@@ -1613,10 +1613,11 @@ _.uniqWith(users, ({ user }) => user.startsWith('N') && user.endsWith('t'));
   <summary><b>Example</b></summary>
 
 ```js
-const zipped = _.zip(['a', 'b'], [1, 2, 3], [true, false]);
+const zipped = _.zip(['a', 'b'], [1, 2], [true, false]);
+// => [['a', 1, true], ['b', 2, false]]
 
 _.unzip(zipped);
-// => [['a', 'b', undefined], [1, 2, 3], [true, false, undefined]]
+// => [['a', 'b'], [1, 2], [true, false]]
 ```
 
   </details>
