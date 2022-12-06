@@ -1,6 +1,6 @@
 {
   "name": "giganto",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Giganto Lib",
   "main": "build/index.js",
   "types": "build/index.d.ts",
