@@ -48,3 +48,5 @@ export { default as unionWith } from './unionWith';
 export { default as uniq } from './uniq';
 export { default as uniqBy } from './uniqBy';
 export { default as uniqWith } from './uniqWith';
+
+export { default as zip } from './zip';

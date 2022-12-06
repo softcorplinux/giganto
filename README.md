@@ -1595,4 +1595,28 @@ _.uniqWith(users, ({ user }) => user.startsWith('N') && user.endsWith('t'));
 
   </details>
 
+#
+
+  <pre>_.zip([args])</pre>
+  <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>args</code> <em>(...*)</em>: The arrays to process.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of grouped elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.zip(['a', 'b'], [1, 2, 3], [true, false]);
+// => [['a', 1, true], ['b', 2, false], [undefined, 3, undefined]]
+```
+
+  </details>
+
 </details>
