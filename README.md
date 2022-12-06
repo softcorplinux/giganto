@@ -1597,6 +1597,32 @@ _.uniqWith(users, ({ user }) => user.startsWith('N') && user.endsWith('t'));
 
 #
 
+  <pre>_.unzip(values)</pre>
+  <p>This method is similar to <code>_.zip</code>, except that it takes an array of grouped elements and creates an array rearranging the elements according to their pre-zip configuration.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array of grouped elements to process.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of regrouped elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const zipped = _.zip(['a', 'b'], [1, 2, 3], [true, false]);
+
+_.unzip(zipped);
+// => [['a', 'b', undefined], [1, 2, 3], [true, false, undefined]]
+```
+
+  </details>
+
+#
+
   <pre>_.zip([args])</pre>
   <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
 
