@@ -51,3 +51,4 @@ export { default as uniqWith } from './uniqWith';
 export { default as unzip } from './unzip';
 
 export { default as zip } from './zip';
+export { default as zipWith } from './zipWith';

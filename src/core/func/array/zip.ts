@@ -1,4 +1,5 @@
 import { Many } from '../../types/common';
+import zipWith from './zipWith';
 
 /**
  * Creates an array of grouped elements, the first of which contains the first elements of the specified arrays,
@@ -15,8 +16,6 @@ import { Many } from '../../types/common';
  * _.zip(['a', 'b'], [1, 2, 3], [true, false]);
  * // => [['a', 1, true], ['b', 2, false], [undefined, 3, undefined]]
  */
-export default function zip<T>(...args: Many<any[]>[]) {
-  return Array(Math.max(...args.map((a) => a.length)))
-    .fill('')
-    .map((_, i) => args.map((a) => a[i]));
+export default function zip(...args: Many<any[]>[]): Many<any[]>[] {
+  return zipWith(...args, (...i) => i) as Many<any[]>[];
 }

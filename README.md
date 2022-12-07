@@ -1646,4 +1646,29 @@ _.zip(['a', 'b'], [1, 2, 3], [true, false]);
 
   </details>
 
+#
+
+  <pre>_.zipWith([args], [predicate])</pre>
+  <p>This method is similar to _.zip, except that it takes a predicate to specify how the grouped values should be combined. Predict is called with the elements of each group <code>...args:T[]</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>args</code> <em>(...*)</em>: The arrays to process.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of grouped elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.zipWith([1, 2, 5, 6], [10, 20, 5, 5], [100, 200, 5, 6], (a, b, c) => a + b + c);
+// => [111, 222, 15, 17]
+```
+
+  </details>
+
 </details>

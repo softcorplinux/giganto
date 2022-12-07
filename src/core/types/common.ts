@@ -15,3 +15,4 @@ export type ListIteratorTypeGuard<T, S extends T> = (value: T, index: number, co
 export type StringIterator<TResult> = (char: string, index: number, string: string) => TResult;
 export type RestCallback<T> = [...Many<T>[], (value: T) => any];
 export type RestCallbackCompare<T> = [...Many<T>[], (a: T, b: T) => any];
+export type RestCallbackRestValues<T> = [...Many<T[]>[], (...args: T[]) => any];
