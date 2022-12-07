@@ -19,6 +19,6 @@ import zip from './zip';
  * _.unzip(zipped);
  * // => [['a', 'b'], [1, 2], [true, false]]
  */
-export default function unzip<T>(values: Many<any[]>[]) {
+export default function unzip(values: Many<any[]>[]) {
   return zip(...values);
 }

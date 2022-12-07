@@ -1624,6 +1624,34 @@ _.unzip(zipped);
 
 #
 
+  <pre>_.unzipWith(values, [predicate])</pre>
+  <p>This method is similar to <code>_.unzip</code>, except that it takes a predicate to specify how the regrouped values should be combined. Predict is called with the elements of each group <code>...args:T[]</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array of grouped elements to process.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of regrouped elements.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const array = zip([1, 2], [10, 20], [100, 200]);
+// => [[1, 10, 100], [2, 20, 200]]
+
+_.unzipWith(array, (a, b) => a + b);
+// => [3, 30, 300]
+```
+
+  </details>
+
+#
+
   <pre>_.zip([args])</pre>
   <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
 
@@ -1649,7 +1677,7 @@ _.zip(['a', 'b'], [1, 2, 3], [true, false]);
 #
 
   <pre>_.zipWith([args], [predicate])</pre>
-  <p>This method is similar to _.zip, except that it takes a predicate to specify how the grouped values should be combined. Predict is called with the elements of each group <code>...args:T[]</code>.</p>
+  <p>This method is similar to <code>_.zip</code>, except that it takes a predicate to specify how the grouped values should be combined. Predict is called with the elements of each group <code>...args:T[]</code>.</p>
 
   <h5>Arguments</h5>
   <ol>
