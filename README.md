@@ -1743,8 +1743,7 @@ _.xorBy(
 #
 
   <pre>_.xorWith([args], [predicate])</pre>
-  <p>This method is similar to <code>_.xor</code>, except that it accepts a comparator that is called to compare array elements.
- * The order of the resulting values is determined by the order in which they appear in arrays.</p>
+  <p>This method is similar to <code>_.xor</code>, except that it accepts a comparator that is called to compare array elements. The order of the resulting values is determined by the order in which they appear in arrays.</p>
 
   <h5>Arguments</h5>
   <ol>
