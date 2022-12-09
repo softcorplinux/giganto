@@ -1701,6 +1701,47 @@ _.xor([2, 1], [2, 3]);
 
 #
 
+  <pre>_.xorBy([args], [predicate])</pre>
+  <p>This method is similar to <code>_.xor</code>, except that it takes a predicate, which is called for each element of each array to generate a criterion by which they are compared. The order of the resulting values is determined by the order in which they appear in arrays. Predict is called with a single argument <code>args: T</code>.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>[args]</code> <em>(...*)</em>: The arrays to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor);
+// => [1.2, 3.4]
+
+const users = [
+  { user: 'Ben', active: false },
+  { user: 'Vic', active: true },
+  { user: 'Nat', active: false },
+  { user: 'Den', active: false },
+];
+_.xorBy(
+  users,
+  [
+    { user: 'Nat', active: false },
+    { user: 'Vic', active: true },
+  ],
+  ({ user }) => user,
+);
+// => [{ user: 'Ben', active: false }, { user: 'Den', active: false }]
+```
+
+  </details>
+
+#
+
   <pre>_.zip([args])</pre>
   <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
 

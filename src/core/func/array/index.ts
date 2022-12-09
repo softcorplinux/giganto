@@ -52,6 +52,7 @@ export { default as unzip } from './unzip';
 export { default as unzipWith } from './unzipWith';
 export { default as without } from './without';
 export { default as xor } from './xor';
+export { default as xorBy } from './xorBy';
 
 export { default as zip } from './zip';
 export { default as zipWith } from './zipWith';
