@@ -1742,6 +1742,41 @@ _.xorBy(
 
 #
 
+  <pre>_.xorWith([args], [predicate])</pre>
+  <p>This method is similar to <code>_.xor</code>, except that it accepts a comparator that is called to compare array elements.
+ * The order of the resulting values is determined by the order in which they appear in arrays.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>[args]</code> <em>(...*)</em>: The arrays to inspect.</li>
+    <li><code>[predicate]</code> <em>{Function}</em>: The predicate called for each element.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+const others = [
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
+
+_.xorWith(objects, others, _.isEqual);
+// => [{ x: 2, y: 1 }, { x: 1, y: 1 }]
+```
+
+  </details>
+
+#
+
   <pre>_.zip([args])</pre>
   <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
 
