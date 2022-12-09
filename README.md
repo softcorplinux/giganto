@@ -1652,6 +1652,31 @@ _.unzipWith(array, (a, b) => a + b);
 
 #
 
+  <pre>_.without(values, [args])</pre>
+  <p>Creates an array that excludes all specified values.</p>
+
+  <h5>Arguments</h5>
+  <ol>
+    <li><code>values</code> <em>(Array)</em>: The array to inspect.</li>
+    <li><code>[args]</code> <em>(...*)</em>: The values to exclude.</li>
+  </ol>
+  <h5>Returns</h5>
+    <ol>
+    <li><em>(Array)</em>: Returns the new array of filtered values.</li>
+  </ol>
+
+  <details>
+  <summary><b>Example</b></summary>
+
+```js
+_.without([2, 1, 2, 3], 1, 2);
+// => [3]
+```
+
+  </details>
+
+#
+
   <pre>_.zip([args])</pre>
   <p>Creates an array of grouped elements, the first of which contains the first elements of the specified arrays, the second of which contains the second elements of the specified arrays, and so on.</p>
 

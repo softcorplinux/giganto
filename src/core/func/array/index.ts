@@ -50,6 +50,7 @@ export { default as uniqBy } from './uniqBy';
 export { default as uniqWith } from './uniqWith';
 export { default as unzip } from './unzip';
 export { default as unzipWith } from './unzipWith';
+export { default as without } from './without';
 
 export { default as zip } from './zip';
 export { default as zipWith } from './zipWith';
