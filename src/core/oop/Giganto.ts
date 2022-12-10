@@ -24,20 +24,23 @@ export default class Giganto<T> {
     return { next: this.next.bind(this), value: this.value.bind(this) };
   }
 
+  public chain<U extends any>(newValue: U, predicate?: (newValue: U, props: NextPredicateProps<any>) => U) {
+    return new Giganto<U>(predicate ? predicate(newValue, this.getNextPredicateProps()) : newValue);
+  }
+
   // private
   private next(predicate?: (props: NextPredicateProps<T>) => T) {
-    let nextValue = this._initialValue;
-
-    if (predicate) {
-      nextValue = predicate({
-        initialValue: this._initialValue,
-        modifiedValue: this._modifiedValue.get(this._nextIndex),
-        allModifiedValues: [...this._modifiedValue].filter((_, i) => i <= this._nextIndex).map(([_, v]) => v),
-      });
-    }
-
+    const nextValue = predicate ? predicate(this.getNextPredicateProps()) : this._initialValue;
     this._nextIndex += 1;
     this._modifiedValue.set(this._nextIndex, nextValue);
     return this;
+  }
+
+  private getNextPredicateProps() {
+    return {
+      initialValue: this._initialValue,
+      modifiedValue: this._modifiedValue.get(this._nextIndex),
+      allModifiedValues: [...this._modifiedValue].filter((_, i) => i <= this._nextIndex).map(([_, v]) => v),
+    };
   }
 }
