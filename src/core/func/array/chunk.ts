@@ -25,18 +25,18 @@ import ceil from '../math/ceil';
  * // => [['a', 'b', 'c'], ['d']]
  */
 export default function chunk<T>(values: T[], length: number = 1): T[][] | undefined {
-  if (!isArray(values) || !isInteger(length)) return undefined;
+  // if (!isArray(values) || !isInteger(length)) return undefined;
 
-  const valuesSize = size(values);
+  const valuesSize = values.length;
   const lastLength = valuesSize % length;
-  const partLength = ceil(valuesSize / length);
-  const response = array(partLength);
+  const partLength = Math.ceil(valuesSize / length);
+  const response = new Array(partLength);
   let resIndex = valuesSize - 1;
   let index = partLength;
 
   while (index--) {
     let i = partLength === index + 1 && lastLength ? lastLength : length;
-    const res = array(i);
+    const res = new Array(i);
 
     while (i--) {
       res[i] = values[resIndex];
@@ -47,4 +47,27 @@ export default function chunk<T>(values: T[], length: number = 1): T[][] | undef
   }
 
   return response;
+
+  // if (!isArray(values) || !isInteger(length)) return undefined;
+
+  // const valuesSize = size(values);
+  // const lastLength = valuesSize % length;
+  // const partLength = ceil(valuesSize / length);
+  // const response = array(partLength);
+  // let resIndex = valuesSize - 1;
+  // let index = partLength;
+
+  // while (index--) {
+  //   let i = partLength === index + 1 && lastLength ? lastLength : length;
+  //   const res = array(i);
+
+  //   while (i--) {
+  //     res[i] = values[resIndex];
+  //     resIndex--;
+  //   }
+
+  //   response[index] = res;
+  // }
+
+  // return response;
 }
